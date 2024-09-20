@@ -6,8 +6,8 @@ const Header: React.FC = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-md p-4">
-      <div className="max-w-4xl mx-auto flex flex-wrap justify-center items-center">
-        <h1 className="text-xl font-bold mr-96">Jack Driscoll</h1>
+      <div className="max-w-4xl mx-auto flex flex-wrap justify-around items-center">
+        <h1 className="text-xl font-bold mr-48">Jack Driscoll</h1>
         <button 
           className="ml-auto lg:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
