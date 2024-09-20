@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         'light-bg': '#F0F0F0',
-        'dark-text': '#333333',
+        'charcoal': '#333333',
         'accent': '#93E9BE',
       },
     },
