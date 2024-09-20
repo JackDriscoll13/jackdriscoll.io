@@ -2,14 +2,9 @@ import React from 'react';
 
 const Footer: React.FC = () => {
     return (
-      <footer className=" text-charcoal py-4">
-    `   <div className="container mx-auto flex flex-col items-center space-y-4">
-            {/* First section: Name and Email */}
-            <div className="flex items-center space-x-4">
-            {/* <div>Jack Driscoll</div> */}
-            <div>|</div>
-            {/* <div>contact@jackdriscoll.io</div> */}
-            </div>
+        <footer className="text-charcoal py-4">
+        <div className="justify-center items-center">
+            <div className="justify-center items-center text-center text-sm ">contact@jackdriscoll.io</div>
         </div>
         <div className="container mx-auto flex justify-center items-center space-x-6 mt-2">
           <a href="mailto:your.email@example.com" className="hover:text-gray-300">
