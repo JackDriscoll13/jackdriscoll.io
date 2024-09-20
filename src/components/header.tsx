@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
   return (
     <header>
-      <h1>My Portfolio</h1>
+      <h1>jackdriscoll.io</h1>
       <nav>
         <ul>
           <li><Link to="/about">About</Link></li>
