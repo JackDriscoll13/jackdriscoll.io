@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen bg-light-bg">
         <Header />
-        <main className="mt-16">
+        <main className="mt-16 flex-grow">
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/about" element={<About />} />
