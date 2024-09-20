@@ -1,12 +1,19 @@
-//import { useState } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/header';
+
 
 function App() {
-
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
-  )
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<h1>About</h1>} />
+        <Route path="/about" element={<h1>About</h1>} />
+        <Route path="/projects" element={<h1>Projects</h1>} />
+        <Route path="/ideas" element={<h1>Ideas</h1>} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
