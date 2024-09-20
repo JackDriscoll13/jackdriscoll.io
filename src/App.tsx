@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/header';
+import Footer from './footer.tsx';
 import About from './about.tsx';
 
 
@@ -16,6 +17,7 @@ function App() {
             <Route path="/ideas" element={<h1>Ideas</h1>} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
