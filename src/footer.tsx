@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
             <div className="justify-center items-center text-center text-sm">contact@jackdriscoll.io</div>
         </div>
         <div className="container mx-auto flex justify-center items-center space-x-6 mt-2">
-          <a href="mailto:your.email@example.com" className="hover:text-gray-300">
+          <a href="mailto:contact@jackdriscoll.io" className="hover:text-gray-300">
             <span className="sr-only">Email</span>
             <svg className="h-6 w-6 hover:text-accent" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />

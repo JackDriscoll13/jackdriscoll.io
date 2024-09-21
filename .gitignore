@@ -3,3 +3,5 @@ dist
 .env
 .DS_Store
 docs/projectnotes.md
+docs/deployment.md
+
