@@ -4,4 +4,6 @@ dist
 .DS_Store
 docs/projectnotes.md
 docs/deployment.md
+docs/awsUserPolicies.md
+
 
