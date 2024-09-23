@@ -7,3 +7,5 @@ docs/deployment.md
 docs/awsUserPolicies.md
 
 
+# Log Processing Container 
+logproccessing/s3_config.py
