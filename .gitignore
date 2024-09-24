@@ -5,7 +5,7 @@ dist
 docs/projectnotes.md
 docs/deployment.md
 docs/awsUserPolicies.md
-
+docs/logging.md
 
 # Log Processing Container 
 logproccessing/s3_config.py
