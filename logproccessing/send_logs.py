@@ -29,9 +29,10 @@ def main():
         print(f"[{current_time}] Shipping logs to s3...")
         ship_logs('/var/log/nginx/access.log', 'access')
         ship_logs('/var/log/nginx/error.log', 'error')
+        ship_logs('/var/log/nginx/navigation.log', 'navigation')
         
-        # Wait for 5 minutes before the next shipment
-        time.sleep(300)
+        # Wait for 12 hours before the next shipment
+        time.sleep(43200)
 
 if __name__ == "__main__":
     main()
