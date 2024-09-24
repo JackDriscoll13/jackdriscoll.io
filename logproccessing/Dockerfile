@@ -2,7 +2,7 @@ FROM python:3.11-alpine
 
 RUN pip install boto3
 
-COPY ship_logs.py /ship_logs.py
-COPY config.py /config.py
+COPY send_logs.py /send_logs.py
+COPY s3_config.py /s3_config.py
 
-CMD ["python", "/ship_logs.py"]
+CMD ["python", "/send_logs.py"]
