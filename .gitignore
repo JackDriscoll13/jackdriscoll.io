@@ -1,7 +1,10 @@
+jackdriscoll.io/node_modules/
 node_modules/
 dist
 .env
 .DS_Store
+
+# Docs
 docs/projectnotes.md
 docs/deployment.md
 docs/awsUserPolicies.md
