@@ -38,3 +38,27 @@ jobs:
     
       - name: Print success message
         run: echo "Successfully built and pushed image to ECR"
+
+
+# IN LIGHTSAIL my code looks like this: 
+# sudo docker run -d  -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt 
+# -v /home/ec2-user/nginx-logs:/var/log/nginx/ --name portfolio 8f1c6f036138
+
+      - name: Deploy to Lightsail
+        env:
+          IMAGE_TAG: ${{ github.sha }}
+          PRIVATE_KEY: ${{ secrets.LIGHTSAIL_SSH_KEY }}
+        run: |
+          echo "$PRIVATE_KEY" > lightsail_key.pem
+          chmod 600 lightsail_key.pem
+          ssh -i lightsail_key.pem -o StrictHostKeyChecking=no ubuntu@${{ env.LIGHTSAIL_INSTANCE_NAME }} << EOF
+            aws ecr get-login-password --region ${{ env.AWS_REGION }} | docker login --username AWS --password-stdin ${{ env.ECR_REPOSITORY_URI }}
+            docker pull ${{ env.ECR_REPOSITORY_URI }}:$IMAGE_TAG
+            docker stop jackdriscoll_io || true
+            docker rm jackdriscoll_io || true
+            docker run -d --name jackdriscoll_io -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt -v /home/ec2-user/nginx-logs:/var/log/nginx/ ${{ env.ECR_REPOSITORY_URI }}:$IMAGE_TAG
+            exit
+          EOF
+
+      - name: Print success message
+        run: echo "Successfully deployed to Lightsail"
