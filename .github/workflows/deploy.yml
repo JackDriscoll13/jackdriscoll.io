@@ -33,7 +33,7 @@ jobs:
         env:
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t ${{ env.ECR_REPOSITORY_URI }}:$IMAGE_TAG .
+          docker build -t ${{ env.ECR_REPOSITORY_URI }}:$IMAGE_TAG -f jackdriscoll.io/Dockerfile jackdriscoll.io
           docker push ${{ env.ECR_REPOSITORY_URI }}:$IMAGE_TAG
     
       - name: Print success message
