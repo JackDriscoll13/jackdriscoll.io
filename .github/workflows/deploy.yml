@@ -40,10 +40,6 @@ jobs:
         run: echo "Successfully built and pushed image to ECR"
 
 
-# IN LIGHTSAIL my code looks like this: 
-# sudo docker run -d  -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt 
-# -v /home/ec2-user/nginx-logs:/var/log/nginx/ --name portfolio 8f1c6f036138
-
       - name: Deploy to Lightsail
         env:
           IMAGE_TAG: ${{ github.sha }}
