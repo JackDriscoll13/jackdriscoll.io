@@ -9,6 +9,7 @@ docs/projectnotes.md
 docs/deployment.md
 docs/awsUserPolicies.md
 docs/logging.md
+docs/ideas-scratch.md
 
 # Log Processing Container 
 logproccessing/s3_config.py
