@@ -5,12 +5,12 @@ const About: React.FC = () => {
   return (
     <div className="max-w-xl mx-auto p-4 text-left flex flex-col gap-6 text-md mt-16">
       <p className="text-charcoal">
-        I'm Jack. I build software and love to solve business problems.
+        I'm Jack. I write code and love to solve business problems.
       </p>
       <p className="text-charcoal">
         I currently work at Spectrum where I do a lot of ingestion, processing, and 
         predictive analytics with viewership data. Recently, I led development of an
-        <Link to="/internal-app" className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
+        <Link to="/projects" className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
           internal app
         </Link>
         that lets non-technical users explore and report on our data.
