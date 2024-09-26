@@ -9,7 +9,7 @@ interface ProjectProps {
 
 const ProjectComponent: React.FC<ProjectProps> = ({ title, description }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-6 w-full">
+    <div className="bg-white shadow-md rounded-lg p-6 w-full transition-all duration-300 ease-in-out hover:ring-2 hover:ring-accent hover:shadow-lg">
       <h2 className="text-md font-semibold mb-2 text-charcoal">{title}</h2>
       <p className="text-gray-600 text-sm">{description}</p>
       {/* Add more content as needed */}
