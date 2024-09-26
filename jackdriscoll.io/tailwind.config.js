@@ -25,8 +25,8 @@ export default {
         '.transform-style-preserve-3d': {
           'transform-style': 'preserve-3d',
         },
-        '.rotate-y-180': {
-          transform: 'rotateY(180deg)',
+        '.rotate-x-180': {
+          transform: 'rotateX(180deg)',
         },
       }
       addUtilities(newUtilities, ['responsive', 'hover'])

@@ -1,6 +1,4 @@
-
 import React, { useState } from 'react';
-
 
 interface ProjectProps {
   title: string;
@@ -15,12 +13,12 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, backCont
         className="w-full h-28 perspective-1000 cursor-pointer transition-all duration-300 ease-in-out hover:ring-2 hover:ring-accent hover:shadow-lg rounded-lg"
         onClick={() => setIsFlipped(!isFlipped)}
         >
-        <div className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
+        <div className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-x-180' : ''}`}>
           <div className="absolute w-full h-full bg-white shadow-md rounded-lg p-4 backface-hidden">
             <h2 className="text-md font-semibold mb-2 text-charcoal">{title}</h2>
             <p className="text-gray-600 text-sm">{description}</p>
           </div>
-          <div className="absolute w-full h-full bg-white text-charcoal shadow-md rounded-lg p-4 backface-hidden rotate-y-180 flex justify-center items-center">
+          <div className="absolute w-full h-full bg-white text-charcoal shadow-md rounded-lg p-4 backface-hidden rotate-x-180 flex justify-center items-center">
             {backContent}
           </div>
         </div>
@@ -44,7 +42,7 @@ const Projects: React.FC = () => {
           }
         />
         <ProjectComponent 
-          title="Lead Generator for Small Business"
+          title="Lead Generator for a Small Business"
           description="A public app I built for a small company. It allows sales people to generate long sheets of leads for precise locations. A simple project with a big business impact."
           backContent={
             <div>
