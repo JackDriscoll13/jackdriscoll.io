@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 interface ProjectProps {
   title: string;
   description: string;
@@ -8,7 +9,7 @@ interface ProjectProps {
 
 const ProjectComponent: React.FC<ProjectProps> = ({ title, description }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg p-6">
+    <div className="bg-white shadow-md rounded-lg p-6 w-full">
       <h2 className="text-xl font-semibold mb-2">{title}</h2>
       <p className="text-gray-600">{description}</p>
       {/* Add more content as needed */}
@@ -18,9 +19,9 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description }) => {
 
 const Projects: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="container mx-auto px-4 py-8 max-w-2xl">
+      <h1 className="text-2xl font-bold mb-8 text-left">Projects</h1>
+      <div className="flex flex-col items-center space-y-6 w-full px-8">
         <ProjectComponent 
           title="Project 1"
           description="Description of Project 1"
