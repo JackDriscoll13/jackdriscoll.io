@@ -17,7 +17,7 @@ const About: React.FC = () => {
         I went to the University of Colorado where I studied Data Science, Business, and Psychology.
       </p>
       <p className="text-charcoal">
-        When I'm not creating shareholder value for the giant coorperation I work for, I like to 
+        When I'm not creating shareholder value for the giant corporation I work for, I like to 
         listen to podcasts, go skiing, and have long dinners with friends. I live in lower Manhattan.
       </p>
     </div>
