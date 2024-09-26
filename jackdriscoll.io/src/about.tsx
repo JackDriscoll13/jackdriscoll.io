@@ -8,7 +8,7 @@ const About: React.FC = () => {
       </p>
       <p className="text-charcoal">
         I currently work at Spectrum where I do a lot of ingestion, processing, and 
-        predictive analytics with viewership data. Recently, I developed an internal app 
+        predictive analytics with viewership data. Recently, I led development of an internal app 
         that lets non-technical users explore and report on our data.
       </p>
       <p className="text-charcoal">
