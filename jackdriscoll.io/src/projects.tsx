@@ -28,8 +28,8 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, backCont
 
 const Projects: React.FC = () => {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-2xl">
-      <h1 className="text-xl font-bold mb-4 text-left text-charcoal">Projects</h1>
+    <div className="container mx-auto px-4 pt-8 max-w-2xl">
+      <h1 className="text-lg font-extrabold mb-2 text-left text-charcoal">Projects</h1>
       <div className="flex flex-col items-center space-y-6 w-full px-8 mb-8">
         <ProjectComponent 
           title="Spectrum News Analytics App"
@@ -76,8 +76,8 @@ const Projects: React.FC = () => {
         {/* Add more ProjectComponent instances as needed */}
         
       </div>
-      <h2 className="text-xl font-bold mb-2 text-left text-charcoal">Smaller Projects</h2>
-      <div className="flex flex-col items-center space-y-6 w-full px-8">
+      <h2 className="text-lg font-extrabold mb-2 text-left text-charcoal">Smaller Projects</h2>
+      <div className="flex flex-col items-center space-y-6 w-full px-8 mb-4">
       <ul className="list-none w-full text-charcoal">
           <li className="mb-2">
                 <a href="https://github.com/JackDriscoll13/meeting_summarization"
@@ -129,7 +129,19 @@ const Projects: React.FC = () => {
           </li>
         </ul>
       </div>
-      <h2 className="text-xl font-bold mb-4 text-left text-charcoal">Publications</h2>
+      <h2 className="text-lg font-extrabold mb-2 text-left text-charcoal">Publications</h2>
+      <div className="flex flex-col items-center space-y-6 w-full px-8">
+      <ul className="list-none w-full text-charcoal">
+        <li className="mb-2 flex items-start">
+            <a href="https://www.tandfonline.com/doi/full/10.1080/1463922X.2022.2086644?needAccess=true"
+                target='_blank' 
+                rel="noopener noreferrer" 
+                className="text-xs hover:text-accent cursor-pointer underline decoration-accent">
+                    "Human-agent teaming and trust Calibration: a theoretical framework, configurable testbed, empirical illustration, and implications for the development of adaptive systems," Theoretical Issues in Ergonomics Science, Vol. 23, June 2022.
+                </a>
+        </li>
+      </ul>
+      </div>
     </div>
 
   );
