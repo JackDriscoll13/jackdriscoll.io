@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 interface ProjectProps {
   title: string;
   description: string;
-  backContent: string;
+  backContent: React.ReactNode;
 }
 const ProjectComponent: React.FC<ProjectProps> = ({ title, description, backContent }) => {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -21,7 +21,7 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, backCont
             <p className="text-gray-600 text-sm">{description}</p>
           </div>
           <div className="absolute w-full h-full bg-white text-charcoal shadow-md rounded-lg p-4 backface-hidden rotate-y-180 flex justify-center items-center">
-            <p className="text-sm">{backContent}</p>
+            {backContent}
           </div>
         </div>
       </div>
@@ -36,12 +36,42 @@ const Projects: React.FC = () => {
         <ProjectComponent 
           title="Spectrum News Analytics App"
           description="A full stack analytics application that lets non-technical users explore and report on viewership data. My largest, longest, and most impactful project to date."
-          backContent="Technologies used: React, Node.js, Express, PostgreSQL. Key features: Data visualization, user authentication, report generation."
+          backContent={
+            <div>
+              <p className="text-sm mb-2 text-center">More details on this project coming soon.</p>
+              <p className="text-sm mb-2 text-center">I'm still trying to figure out if's cool with the team if I show off the code etc..</p>
+            </div>
+          }
         />
         <ProjectComponent 
           title="Lead Generator for Small Business"
           description="A public app I built for a small company. It allows sales people to generate long sheets of leads for precise locations. A simple project with a big business impact."
-          backContent="You can try the app here: <a href='https://qfresheners.com/leads' target='_blank'>qfresheners.com/leads</a>"
+          backContent={
+            <div>
+              <p className="text-sm mb-2 text-center">You can try the app yourself, linked{' '}
+                <a 
+                    href='https://qfresheners.com/leads' 
+                    target='_blank' 
+                    rel="noopener noreferrer" 
+                    className="underline decoration-accent font-bold hover:text-accent cursor-pointer"
+                    >
+                    here 
+                </a>
+              </p>
+              <p className="text-sm mb-2 text-center">
+                Or check out the code on github{' '}
+                <a 
+                    href='https://github.com/JackDriscoll13/automotive_lead_engine' 
+                    target='_blank' 
+                    rel="noopener noreferrer" 
+                    className="underline decoration-accent font-bold hover:text-accent cursor-pointer"
+                    >
+                    here
+                </a>
+              </p>
+            
+            </div>
+          }
         />
         {/* Add more ProjectComponent instances as needed */}
         
