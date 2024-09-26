@@ -15,7 +15,7 @@ const NietzscheQuote: React.FC = () => {
       </p>
       <div className="flex justify-center items-center mt-12">
       <Link to="/ideas">
-        <button className="text-charcoal px-4 py-2 rounded-md shadow-lg">
+        <button className="text-charcoal px-4 py-2 rounded-md shadow-lg underline decoration-accent font-medium hover:text-accent cursor-pointer">
           {`<-`} Back to Ideas
         </button>
       </Link>

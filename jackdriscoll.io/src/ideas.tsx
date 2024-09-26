@@ -12,6 +12,10 @@ const Ideas: React.FC = () => {
         </p>
         <h1 className="text-lg font-semibold italic"> General Thoughts </h1>
         <ul className="list-none pl-0">
+            <li className="mb-2 flex">
+                <span className="mr-2 flex-shrink-0">-</span>
+                <span>Never stop learning</span>
+            </li>
           <li className="mb-2 flex">
             <span className="mr-2 flex-shrink-0">-</span>
             <span>Update your priors</span>
@@ -55,7 +59,7 @@ const Ideas: React.FC = () => {
             </li>
             <li className="mb-2 flex">
                 <span className="mr-2 flex-shrink-0">-</span>
-                <span>You don't "master" programming concepts just like you don't "master" programming languages. You understand them vaguely when you read/watch about them, you go and apply them numerous times in a project and then you continuously improve on that.</span>
+                <span>You don't "master" programming concepts just like you don't "master" programming languages. You understand them vaguely when you read/watch about them, you go and apply them numerous times in a project and then you continuously improve on that</span>
             </li>
             <li className="mb-2 flex">
                 <span className="mr-2 flex-shrink-0">-</span>
