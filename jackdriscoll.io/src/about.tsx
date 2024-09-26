@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   return (
@@ -8,13 +9,28 @@ const About: React.FC = () => {
       </p>
       <p className="text-charcoal">
         I currently work at Spectrum where I do a lot of ingestion, processing, and 
-        predictive analytics with viewership data. Recently, I led development of an internal app 
+        predictive analytics with viewership data. Recently, I led development of an
+        <Link to="/internal-app" className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
+          internal app
+        </Link>
         that lets non-technical users explore and report on our data.
       </p>
       <p className="text-charcoal">
-        In the past, I've worked on Human-Computer Interaction research and studied AI collaboration and 
-        trust using brain imaging. 
-        I went to the University of Colorado where I studied Data Science, Business, and Psychology.
+        In the past, I've worked on 
+        <a href="https://www.colorado.edu/lab/shine/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
+          Human-Computer Interaction research
+        </a>
+        and studied 
+        <a href="https://www.tandfonline.com/doi/full/10.1080/1463922X.2022.2086644"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
+        AI collaboration and trust
+        </a>
+        using brain imaging. I went to the University of Colorado where I studied Data Science, Business, and Psychology.
       </p>
       <p className="text-charcoal">
         When I'm not creating shareholder value for the giant corporation I work for, I like to 
