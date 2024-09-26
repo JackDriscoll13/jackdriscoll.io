@@ -57,6 +57,7 @@ const Projects: React.FC = () => {
                     >
                     here 
                 </a>
+                .
               </p>
               <p className="text-sm mb-2 text-center">
                 Or check out the code on github{' '}
@@ -68,6 +69,7 @@ const Projects: React.FC = () => {
                     >
                     here
                 </a>
+                .
               </p>
             
             </div>
