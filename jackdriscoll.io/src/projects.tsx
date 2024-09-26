@@ -76,8 +76,59 @@ const Projects: React.FC = () => {
         {/* Add more ProjectComponent instances as needed */}
         
       </div>
-      <h2 className="text-xl font-bold mb-4 text-left text-charcoal">Smaller Projects</h2>
-      <div className="flex flex-col items-center space-y-6 w-full px-8 mb-8"></div>
+      <h2 className="text-xl font-bold mb-2 text-left text-charcoal">Smaller Projects</h2>
+      <div className="flex flex-col items-center space-y-6 w-full px-8">
+      <ul className="list-none w-full text-charcoal">
+          <li className="mb-2">
+                <a href="https://github.com/JackDriscoll13/meeting_summarization"
+                target='_blank' 
+                rel="noopener noreferrer" 
+                className="font-bold text-sm hover:text-accent cursor-pointer underline decoration-accent">
+                    Meeting Summarization Tool
+                </a>
+            <ul className="list-none pl-5 text-sm">
+              <li className="flex items-start">
+                <span className="mr-2">-</span>
+                <span>A tool that used OpenAI's API to summarize zoom meeting transcripts</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">-</span>
+                <span>Distrubuted at Charter (Spectrum) to ~8 people, mostly my immediate coworkers </span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">-</span>
+                <span>Built with raw Python in early 2023, when LLM context windows were very small</span>
+              </li>
+            </ul>  
+          </li>
+          <li className="mb-2">
+    
+            <a href="https://github.com/JackDriscoll13/jackdriscoll.io"
+                target='_blank' 
+                rel="noopener noreferrer" 
+                className="font-bold text-sm hover:text-accent cursor-pointer underline decoration-accent">
+                    Personal Portfolio
+                </a>
+                <span className="text-sm font-bold"> (this website!)</span>
+            <ul className="list-none pl-5 text-sm">
+              <li className="flex items-start">
+                <span className="mr-2">-</span>
+                <span>Built with React, TypeScript, and Tailwind CSS</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">-</span>
+                <span>Deployed with AWS + Docker, uses Github Actions for quick and easy CD</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-2">-</span>
+                <span>
+                    Includes a logging system that tracks site traffic and uploads logs to s3
+                </span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
       <h2 className="text-xl font-bold mb-4 text-left text-charcoal">Publications</h2>
     </div>
 
