@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/header';
-import Footer from './footer.tsx';
+import Footer from './components/footer.tsx';
 import About from './about.tsx';
 
 function LoggerComponent() {
