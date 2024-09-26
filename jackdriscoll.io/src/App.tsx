@@ -5,6 +5,7 @@ import Footer from './components/footer.tsx';
 import About from './about.tsx';
 import Projects from './projects.tsx';
 import Ideas from './ideas.tsx';
+import NietzscheQuote from './components/Nietzsche-labryinth.tsx';
 
 function LoggerComponent() {
   // This compnenet logs the page view to the server, so I can track where users are navigating on the site
@@ -39,6 +40,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/ideas" element={<Ideas />} />
+            <Route path="/nietzsche-quote" element={<NietzscheQuote />} />
           </Routes>
         </main>
         <Footer />
