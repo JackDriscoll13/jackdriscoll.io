@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/header';
-import Footer from './footer.tsx';
+import Footer from './components/footer.tsx';
 import About from './about.tsx';
-
+import Projects from './projects.tsx';
 function LoggerComponent() {
   // This compnenet logs the page view to the server, so I can track where users are navigating on the site
   const location = useLocation();
@@ -35,7 +35,7 @@ function App() {
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<h1>Projects - Changes are live!</h1>} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/ideas" element={<h1>Ideas</h1>} />
           </Routes>
         </main>
