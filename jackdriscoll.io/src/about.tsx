@@ -8,12 +8,19 @@ const About: React.FC = () => {
         I'm Jack. I write code and love to solve business problems.
       </p>
       <p className="text-charcoal">
-        I currently work at Spectrum where I do a lot of ingestion, processing, and 
+        I currently work at 
+        <a href="https://en.wikipedia.org/wiki/Spectrum_(brand)"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
+        Spectrum
+        </a>
+        where I do a lot of ingestion, processing, and 
         predictive analytics with viewership data. Recently, I led development of an
         <Link to="/projects" className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
           internal app
         </Link>
-        that lets non-technical users explore and report on our data.
+        that enables non-technical teams to explore and report on our data.
       </p>
       <p className="text-charcoal">
         In the past, I've worked on 
