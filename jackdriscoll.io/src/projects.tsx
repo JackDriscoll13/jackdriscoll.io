@@ -133,7 +133,7 @@ const Projects: React.FC = () => {
       <div className="flex flex-col items-center space-y-6 w-full px-8">
       <ul className="list-none w-full text-charcoal">
         <li className="mb-2 flex items-start">
-            <a href="https://www.tandfonline.com/doi/full/10.1080/1463922X.2022.2086644?needAccess=true"
+            <a href="https://www.tandfonline.com/doi/full/10.1080/1463922X.2022.208664"
                 target='_blank' 
                 rel="noopener noreferrer" 
                 className="text-xs hover:text-accent cursor-pointer underline decoration-accent">
