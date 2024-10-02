@@ -5,7 +5,7 @@ const About: React.FC = () => {
   return (
     <div className="max-w-xl mx-auto p-4 text-left flex flex-col gap-6 text-md mt-16">
       <p className="text-charcoal">
-        I'm Jack. I write code and love to solve business problems.
+        I'm Jack. I write code and try to solve business problems.
       </p>
       <p className="text-charcoal">
         I currently work at 
@@ -37,10 +37,10 @@ const About: React.FC = () => {
         className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
         AI collaboration and trust
         </a>
-        using brain imaging. I went to the University of Colorado where I studied Data Science, Business, and Psychology.
+        using brain imaging. I went to the University of Colorado where I studied data science, business, and psychology.
       </p>
       <p className="text-charcoal">
-        When I'm not hunched over my keyboard, creating shareholder value for the mega-corporation I work for; I like to 
+        When I'm not hunched over my keyboard, I like to 
         listen to podcasts, go skiing, and have long dinners with friends. I live in lower Manhattan.
       </p>
     </div>
