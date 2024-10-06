@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Ideas: React.FC = () => {
   return (
@@ -40,12 +40,12 @@ const Ideas: React.FC = () => {
             <span className="mr-2 flex-shrink-0">-</span>
             <span>I know its complicated, try to explain it to me simply</span>
           </li>
-          <li className="mb-2 flex">
+          {/* <li className="mb-2 flex">
             <span className="mr-2 flex-shrink-0">-</span>
             <Link to="/nietzsche-quote" className="underline decoration-accent font-medium hover:text-accent cursor-pointer">
               An inspiring quote to hype you up
             </Link>
-          </li>
+          </li> */}
         </ul>
         <h1 className="text-lg font-semibold italic"> Programming Thoughts </h1>
         <ul className="list-none pl-0">
