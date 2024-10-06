@@ -5,7 +5,7 @@ const About: React.FC = () => {
   return (
     <div className="max-w-xl mx-auto p-4 text-left flex flex-col gap-6 text-md mt-16">
       <p className="text-charcoal">
-        I'm Jack. I write code and try to solve business problems.
+        I'm Jack. I write code to solve business problems.
       </p>
       <p className="text-charcoal">
         I currently work at 
@@ -15,12 +15,12 @@ const About: React.FC = () => {
         className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
         Spectrum
         </a>
-        where I do a lot of ingestion, processing, and 
-        predictive analytics with viewership data. Recently, I led development of an
+        where I focus on ingestion, processing, and 
+        predictive analytics with viewership data. Recently, I developed an 
         <Link to="/projects" className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
-          internal app
+          internal data app
         </Link>
-        that enables non-technical teams to explore and report on our data.
+        that lets product teams explore and report out key performance metrics.
       </p>
       <p className="text-charcoal">
         In the past, I've worked on 
