@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
           backContent={
             <div>
               <p className="text-sm mb-2 text-center">This project is still in production at Spectrum.</p>
-              <p className="text-sm mb-2 text-center">I've obtained permission to share some of the feature code as a demo.</p>
+              <p className="text-sm mb-2 text-center">I've obtained permission to share some of the feature code as a demo:</p>
               <p className="text-sm mb-2 text-center">
                 <a 
                   href="https://github.com/JackDriscoll13/sn_reporting_app-frontend_expo"
@@ -173,7 +173,7 @@ const Projects: React.FC = () => {
       <div className="flex flex-col items-center space-y-4 md:space-y-6 w-full px-2 md:px-8">
       <ul className="list-none w-full text-charcoal">
         <li className="mb-2 flex items-start">
-            <a href="https://www.tandfonline.com/doi/full/10.1080/1463922X.2022.208664"
+            <a href="https://www.tandfonline.com/doi/full/10.1080/1463922X.2022.2086644"
                 target='_blank' 
                 rel="noopener noreferrer" 
                 className="text-[10px] md:text-xs hover:text-accent cursor-pointer underline decoration-accent">
