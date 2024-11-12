@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-light-bg shadow-md p-4">
+    <header className="fixed top-0 left-0 right-0 bg-light-bg shadow-md p-4 z-50">
       <div className="max-w-4xl mx-auto flex flex-wrap justify-around items-center">
         <h1 className="text-xl font-bold mr-48 text-charcoal relative pb-1">
           Jack Driscoll
