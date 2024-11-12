@@ -12,6 +12,10 @@ const Header: React.FC = () => {
     return location.pathname === path ? "border-b-2 border-accent" : "";
   };
 
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-light-bg shadow-md p-4 z-50">
       <div className="max-w-4xl mx-auto flex flex-wrap justify-around items-center">
@@ -30,9 +34,9 @@ const Header: React.FC = () => {
         </button>
         <nav className={`w-full lg:w-auto ${isMenuOpen ? 'block' : 'hidden'} lg:block mt-4 lg:mt-0`}>
           <ul className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-8 text-lg">
-            <li><Link to="/" className={`text-gray-700 hover:text-accent pb-1 ${isActive("/about")}`}>About</Link></li>
-            <li><Link to="/projects" className={`text-gray-700 hover:text-accent pb-1 ${isActive("/projects")}`}>Projects</Link></li>
-            <li><Link to="/ideas" className={`text-gray-700 hover:text-accent pb-1 ${isActive("/ideas")}`}>Ideas</Link></li>
+            <li><Link to="/" className={`text-gray-700 hover:text-accent pb-1 ${isActive("/about")}`} onClick={handleNavClick}>About</Link></li>
+            <li><Link to="/projects" className={`text-gray-700 hover:text-accent pb-1 ${isActive("/projects")}`} onClick={handleNavClick}>Projects</Link></li>
+            <li><Link to="/ideas" className={`text-gray-700 hover:text-accent pb-1 ${isActive("/ideas")}`} onClick={handleNavClick}>Ideas</Link></li>
           </ul>
         </nav>
       </div>
