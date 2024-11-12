@@ -10,12 +10,17 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, backCont
   
     return (
         <div 
-        className="w-full h-28 perspective-1000 cursor-pointer transition-all duration-300 ease-in-out hover:ring-2 hover:ring-accent hover:shadow-lg rounded-lg"
+        className="w-full h-40 perspective-1000 cursor-pointer transition-all duration-300 ease-in-out hover:ring-2 hover:ring-accent hover:shadow-lg rounded-lg"
         onClick={() => setIsFlipped(!isFlipped)}
         >
         <div className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${isFlipped ? 'rotate-x-180' : ''}`}>
           <div className="absolute w-full h-full bg-white shadow-md rounded-lg p-4 backface-hidden">
-            <h2 className="text-md font-semibold mb-2 text-charcoal">{title}</h2>
+            <div className="flex justify-between items-start">
+              <h2 className="text-lg font-semibold mb-2 text-charcoal">{title}</h2>
+              <button className="text-xs text-accent hover:text-accent/80">
+                Click to flip ↻
+              </button>
+            </div>
             <p className="text-gray-600 text-sm">{description}</p>
           </div>
           <div className="absolute w-full h-full bg-white text-charcoal shadow-md rounded-lg p-4 backface-hidden rotate-x-180 flex justify-center items-center">
@@ -36,8 +41,28 @@ const Projects: React.FC = () => {
           description="A full stack analytics application that lets non-technical users explore and report on viewership data. My largest, longest, and most impactful project to date."
           backContent={
             <div>
-              <p className="text-sm mb-2 text-center">More details on this project coming soon.</p>
-              <p className="text-sm mb-2 text-center">I'm still trying to figure out if's cool with the team if I show off the code etc..</p>
+              <p className="text-sm mb-2 text-center">This project is still in production at Spectrum.</p>
+              <p className="text-sm mb-2 text-center">I've obtained permission to share some of the feature code as a demo.</p>
+              <p className="text-sm mb-2 text-center">
+                <a 
+                  href="https://github.com/JackDriscoll13/sn_reporting_app-frontend_expo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-accent font-bold hover:text-accent cursor-pointer"
+                >
+                  Frontend Code Demo
+                </a>
+              </p>
+              <p className="text-sm mb-2 text-center">
+                <a 
+                  href="https://github.com/JackDriscoll13/sn_reporting_app-backend_expo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline decoration-accent font-bold hover:text-accent cursor-pointer"
+                >
+                  Backend Code Demo
+                </a>
+              </p>
             </div>
           }
         />
