@@ -4,8 +4,9 @@ interface ProjectProps {
   title: string;
   description: string;
   backContent: React.ReactNode;
+  technologies: string[]; // New prop
 }
-const ProjectComponent: React.FC<ProjectProps> = ({ title, description, backContent }) => {
+const ProjectComponent: React.FC<ProjectProps> = ({ title, description, backContent, technologies }) => {
     const [isFlipped, setIsFlipped] = useState(false);
   
     return (
@@ -21,7 +22,17 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, backCont
                 Click to flip ↻
               </button>
             </div>
-            <p className="text-gray-600 text-sm">{description}</p>
+            <p className="text-gray-600 text-sm mb-4">{description}</p>
+            <div className="absolute bottom-4 left-4 right-4">
+              <div className="text-xs text-gray-500 flex items-center justify-center">
+                {technologies.map((tech, index) => (
+                  <React.Fragment key={index}>
+                    {index > 0 && <span className="mx-2">-</span>}
+                    <span className="hover:text-accent">{tech}</span>
+                  </React.Fragment>
+                ))}
+              </div>
+            </div>
           </div>
           <div className="absolute w-full h-full bg-white text-charcoal shadow-md rounded-lg p-4 backface-hidden rotate-x-180 flex justify-center items-center">
             {backContent}
@@ -39,6 +50,7 @@ const Projects: React.FC = () => {
         <ProjectComponent 
           title="Spectrum News Analytics App"
           description="A full stack analytics application that lets non-technical users explore and report on viewership data. My largest, longest, and most impactful project to date."
+          technologies={['Python', 'FastAPI', `Airflow`, `PostgreSQL`, `React`, `TypeScript`,`AWS`]}
           backContent={
             <div>
               <p className="text-sm mb-2 text-center">This project is still in production at Spectrum.</p>
@@ -69,6 +81,7 @@ const Projects: React.FC = () => {
         <ProjectComponent 
           title="Lead Generator for a Small Business"
           description="A public app I built for a small company. It allows sales people to generate long sheets of leads for precise locations. A simple project with a big business impact."
+          technologies={['TypeScript', 'React', 'Python', 'Google API']}
           backContent={
             <div>
               <p className="text-sm mb-2 text-center">You can try the app yourself, linked{' '}
