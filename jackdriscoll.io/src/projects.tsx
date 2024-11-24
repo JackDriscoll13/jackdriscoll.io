@@ -17,16 +17,16 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, backCont
 
     const backContentWithButton = modalContent ? (
       <div className="flex flex-col items-center">
-        {backContent}
         <button
           onClick={(e) => {
             e.stopPropagation();
             setIsModalOpen(true);
           }}
-          className="mt-4 text-accent hover:text-accent/80 text-sm underline"
+          className="mt-2 mb-2 text-accent hover:text-accent/80 text-sm underline font-bold"
         >
           Read an Overview
         </button>
+        {backContent}
       </div>
     ) : (
       backContent
