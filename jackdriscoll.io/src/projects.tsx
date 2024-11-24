@@ -115,6 +115,20 @@ const Projects: React.FC = () => {
               </p>
             </div>
           }
+          modalContent={
+            <div>
+              <img 
+                src="/path-to-your-diagram.png" 
+                alt="Project Architecture Diagram"
+                className="w-full object-contain mb-6"
+              />
+              <div className="space-y-4">
+                <p>Detailed project description...</p>
+                <h3 className="text-xl font-semibold">Technical Architecture</h3>
+                <p>Architecture explanation...</p>
+              </div>
+            </div>
+          }
         />
         <ProjectComponent 
           title="Lead Generator for a Small Business"
