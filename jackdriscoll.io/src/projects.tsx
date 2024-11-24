@@ -22,7 +22,7 @@ const ProjectComponent: React.FC<ProjectProps> = ({ title, description, backCont
             e.stopPropagation();
             setIsModalOpen(true);
           }}
-          className="mt-2 mb-2 text-accent hover:text-accent/80 text-sm underline font-bold"
+          className="mt-2 mb-2 px-4 py-2 bg-accent text-white rounded-md hover:bg-accent/90 transition-colors duration-200 text-sm font-bold shadow-sm hover:shadow-md"
         >
           Read an Overview
         </button>
@@ -91,8 +91,7 @@ const Projects: React.FC = () => {
           technologies={['Python', 'FastAPI', `Airflow`, `PostgreSQL`, `React`, `TypeScript`,`AWS`]}
           backContent={
             <div>
-              <p className="text-sm mb-2 text-center">This project is still in production at Spectrum.</p>
-              <p className="text-sm mb-2 text-center">I've obtained permission to share some of the feature code as a demo:</p>
+              <p className="text-sm mb-2 text-center">This project is still in production at Spectrum, but I've obtained permission to share some of the feature code as a demo:</p>
               <p className="text-sm mb-2 text-center">
                 <a 
                   href="https://github.com/JackDriscoll13/sn_reporting_app-frontend_expo"
@@ -102,8 +101,7 @@ const Projects: React.FC = () => {
                 >
                   Frontend Code Demo
                 </a>
-              </p>
-              <p className="text-sm mb-2 text-center">
+                <span className="mx-2 text-gray-500">|</span>
                 <a 
                   href="https://github.com/JackDriscoll13/sn_reporting_app-backend_expo"
                   target="_blank"
