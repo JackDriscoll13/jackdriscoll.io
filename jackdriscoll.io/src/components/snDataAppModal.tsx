@@ -44,83 +44,94 @@ const SnDataAppModal: React.FC = () => {
       <p>The platform also includes a custom data processing pipeline that was able to ingest data from a variety of sources and validate data across them.</p>
       <p>The backend pipleines use airflow and sql for data transformation and basic validation. The API was built using FastAPI and takes advantage of pandas' flexibility for complex and nuanced data processing.</p>  
     </div>
-    <h3 className="text-xl font-semibold mt-4">Feature Demo</h3>
-    <p className="mt-1">
-        Below are examples of three features I've built and integrated into the platform.
-    </p>
-    <p className="text-xs text-gray-600">*Note: All demos use dummy data and are sped up for brevity.</p>
-    <p className="text-sm text-gray-600 mt-2 font-semibold">Feature 1: Interactive Coverage Map</p>
-    <div className="grid grid-cols-1 gap-4 mt-2">
-      <div className="flex flex-col">
-        <video 
-          className="w-full rounded-lg shadow-lg"
-          autoPlay
-          loop
-          muted
-          playsInline
-          controls
-          preload="auto"
-          ref={(el) => {
-            if (el) {
-              el.playbackRate = 2.0;
-              el.play().catch(error => console.log('Video autoplay error:', error));
-            }
-          }}
-        >
-          <source src="/videos/coverage_map_demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <p className="text-sm text-gray-600 mt-1"> Built using: Geojson data stored in s3, Mapbox GL JS (lazy loading of map tiles)</p>
+    <h3 className="text-xl font-semibold mt-4">Example Feature Demos</h3>
+      <p className="text-base">Below are examples of three features I've built and integrated into the platform.</p>
+      <p className="text-xs text-gray-500">*Note: All demos use dummy data and are sped up for brevity.</p>
+   
+    <div className="space-y-8 mt-4">
+      <div className="space-y-2">
+        <h4 className="text-lg font-semibold text-gray-800">Feature 1: Interactive Coverage Map</h4>
+        <div className="rounded-lg overflow-hidden">
+          <video 
+            className="w-full shadow-lg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+            preload="auto"
+            ref={(el) => {
+              if (el) {
+                el.playbackRate = 2.0;
+                el.play().catch(error => console.log('Video autoplay error:', error));
+              }
+            }}
+          >
+            <source src="/videos/coverage_map_demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p className="text-sm text-gray-600 mt-2">
+            Built using: Geojson data stored in s3, Mapbox GL JS (lazy loading of map tiles)
+          </p>
+        </div>
       </div>
 
+      <div className="space-y-2">
+        <h4 className="text-base font-semibold text-gray-800">
+          Feature 2: Dynamic KPI Dashboard with over 15 distinct Table and Graph Views
+        </h4>
+        <div className="rounded-lg overflow-hidden">
+          <video 
+            className="w-full shadow-lg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+            preload="auto"
+            ref={(el) => {
+              if (el) {
+                el.playbackRate = 2.0;
+                el.play().catch(error => console.log('Video autoplay error:', error));
+              }
+            }}
+          >
+            <source src="/videos/engagement_demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p className="text-sm text-gray-600 mt-2">
+            Built using: React Table (Tanstack Table), Chart.js, and custom data processing endpoints using FastAPI and Pandas
+          </p>
+        </div>
+      </div>
 
-    <p className="text-sm text-gray-600 mt-2 font-semibold">Feature 2: Dynamic KPI Dashboard with over 15 distinct Table and Graph Views</p>
-    <div className="grid grid-cols-1 gap-4">
-      <div className="flex flex-col">
-        <video 
-          className="w-full rounded-lg shadow-lg"
-          autoPlay
-          loop
-          muted
-          playsInline
-          controls
-          preload="auto"
-          ref={(el) => {
-            if (el) {
-              el.playbackRate = 2.0;
-              el.play().catch(error => console.log('Video autoplay error:', error));
-            }
-          }}
-        >
-          <source src="/videos/engagement_demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <p className="text-sm text-gray-600 mt-1"> Built using: React Table (Tanstack Table), Chart.js, and a custom data processing endpoints using FastAPI and Pandas</p>
-      </div>
-      </div>
-    </div>
-    <p className="text-sm text-gray-600 mt-2 font-semibold">Feature 3: Custom Reporting Tool for Analysts, (Generates Custom Email Reports from BeSpoke Data)</p>
-    <div className="grid grid-cols-1 gap-4">
-      <div className="flex flex-col">
-        <video 
-          className="w-full rounded-lg shadow-lg"
-          autoPlay
-          loop
-          muted
-          playsInline
-          controls
-          preload="auto"
-          ref={(el) => {
-            if (el) {
-              el.playbackRate = 2.0;
-              el.play().catch(error => console.log('Video autoplay error:', error));
-            }
-          }}
-        >
-          <source src="/videos/nielsen_report_demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <p className="text-sm text-gray-600 mt-1"> Built using: Custom React Frontend, FastAPI Endpoints to store and Process Files for Upload and Download, Pandas for Data Processing and Matplotlib for Charts and Tables</p>
+      <div className="space-y-2">
+        <h4 className="text-base font-semibold text-gray-800">
+          Feature 3: Custom Reporting Tool for Analysts
+        </h4>
+        <div className="rounded-lg overflow-hidden">
+          <video 
+            className="w-full shadow-lg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            controls
+            preload="auto"
+            ref={(el) => {
+              if (el) {
+                el.playbackRate = 2.0;
+                el.play().catch(error => console.log('Video autoplay error:', error));
+              }
+            }}
+          >
+            <source src="/videos/nielsen_report_demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <p className="text-sm text-gray-600 mt-2">
+            Built using: Custom React Frontend, FastAPI Endpoints to store and Process Files for Upload and Download, Pandas for Data Processing and Matplotlib for Charts and Tables
+          </p>
+        </div>
       </div>
     </div>
   </div>
