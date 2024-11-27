@@ -17,7 +17,7 @@ const SnDataAppModal: React.FC = () => {
         </p>
         <h3 className="text-xl font-semibold mt-4">The Problem</h3>
         <p className="mt-1">
-            That analyst team was using alteryx and excel to perform analysis. Analysts complained that they were spending a significant amount of time running recurring reports that they felt could be automated.
+            The analyst team was using alteryx and excel to perform analysis. Analysts complained that they were spending a significant amount of time running recurring reports that they felt could be automated.
             They also complained about data quality issues and the difficulty of validating data across multiple sources. Spectrum was interested in building a more sophisticated analytics platform to:
         </p>
         <ul className="list-decimal ml-6 mt-2">

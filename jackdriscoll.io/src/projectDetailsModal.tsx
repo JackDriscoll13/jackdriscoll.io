@@ -16,7 +16,7 @@ const InfoModal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) =
       <div className="relative bg-white rounded-lg w-11/12 max-w-4xl max-h-[90vh] overflow-y-auto p-6 z-50">
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-accent"
+          className="fixed top-4 right-4 w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-lg text-gray-500 hover:text-accent hover:bg-gray-100"
           aria-label="Close modal"
         >
           ✕
