@@ -45,6 +45,11 @@ const SnDataAppModal: React.FC = () => {
       <p>The backend pipleines use airflow and sql for data transformation and basic validation. The API was built using FastAPI and takes advantage of pandas' flexibility for complex and nuanced data processing.</p>  
     </div>
     <h3 className="text-xl font-semibold mt-4">Feature Demo</h3>
+    <p className="mt-1">
+        Below are examples of three features I've built and integrated into the platform.
+    </p>
+    <p className="text-xs text-gray-600">*Note: All demos use dummy data and are sped up for brevity.</p>
+    <p className="text-sm text-gray-600 mt-2 font-semibold">Feature 1: Interactive Coverage Map</p>
     <div className="grid grid-cols-1 gap-4 mt-2">
       <div className="flex flex-col">
         <video 
@@ -65,9 +70,12 @@ const SnDataAppModal: React.FC = () => {
           <source src="/videos/coverage_map_demo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <p className="text-sm text-gray-600 mt-2">Feature 1: Dashboard Navigation</p>
+        <p className="text-sm text-gray-600 mt-1"> Built using: Geojson data stored in s3, Mapbox GL JS (lazy loading of map tiles)</p>
       </div>
 
+
+    <p className="text-sm text-gray-600 mt-2 font-semibold">Feature 2: Dynamic KPI Dashboard with over 15 distinct Table and Graph Views</p>
+    <div className="grid grid-cols-1 gap-4">
       <div className="flex flex-col">
         <video 
           className="w-full rounded-lg shadow-lg"
@@ -75,14 +83,44 @@ const SnDataAppModal: React.FC = () => {
           loop
           muted
           playsInline
+          controls
+          preload="auto"
           ref={(el) => {
-            if (el) el.playbackRate = 2.0;
+            if (el) {
+              el.playbackRate = 2.0;
+              el.play().catch(error => console.log('Video autoplay error:', error));
+            }
           }}
         >
-          <source src="/videos/feature2.mp4" type="mp4" />
+          <source src="/videos/engagement_demo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <p className="text-sm text-gray-600 mt-2">Feature 2: Data Filtering</p>
+        <p className="text-sm text-gray-600 mt-1"> Built using: React Table (Tanstack Table), Chart.js, and a custom data processing endpoints using FastAPI and Pandas</p>
+      </div>
+      </div>
+    </div>
+    <p className="text-sm text-gray-600 mt-2 font-semibold">Feature 3: Custom Reporting Tool for Analysts, (Generates Custom Email Reports from BeSpoke Data)</p>
+    <div className="grid grid-cols-1 gap-4">
+      <div className="flex flex-col">
+        <video 
+          className="w-full rounded-lg shadow-lg"
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls
+          preload="auto"
+          ref={(el) => {
+            if (el) {
+              el.playbackRate = 2.0;
+              el.play().catch(error => console.log('Video autoplay error:', error));
+            }
+          }}
+        >
+          <source src="/videos/nielsen_report_demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <p className="text-sm text-gray-600 mt-1"> Built using: Custom React Frontend, FastAPI Endpoints to store and Process Files for Upload and Download, Pandas for Data Processing and Matplotlib for Charts and Tables</p>
       </div>
     </div>
   </div>
