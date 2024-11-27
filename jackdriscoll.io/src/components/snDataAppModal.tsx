@@ -45,7 +45,7 @@ const SnDataAppModal: React.FC = () => {
       <p>The backend pipleines use airflow and sql for data transformation and basic validation. The API was built using FastAPI and takes advantage of pandas' flexibility for complex and nuanced data processing.</p>  
     </div>
     <h3 className="text-xl font-semibold mt-4">Feature Demo</h3>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+    <div className="grid grid-cols-1 gap-4 mt-2">
       <div className="flex flex-col">
         <video 
           className="w-full rounded-lg shadow-lg"
