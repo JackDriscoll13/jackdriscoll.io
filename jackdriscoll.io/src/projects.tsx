@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import InfoModal from './projectDetailsModal';
 
 // Specific Project Content
-import SnDataAppModal from './components/snDataAppModal';
+import SnDataAppModal from './modalcontent/snDataAppModal';
 
 interface ProjectProps {
   title: string;
