@@ -34,11 +34,12 @@ const Projects: React.FC = () => {
 
             {/* Smaller Projects Section */}
             <h2 className="text-base md:text-lg font-extrabold mb-2 text-left text-charcoal">Smaller Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-8 mb-6">
+            <div className="flex flex-col space-y-4 px-2 md:px-8 mb-6">
                 <SmallProjectComponent 
                     title="Meeting Summarization Tool"
                     description="An OpenAI-powered tool for summarizing zoom meeting transcripts"
                     technologies={['Python', 'OpenAI API']}
+                    githubUrl="https://github.com/JackDriscoll13/meeting_summarization_tool"
                     backContent={
                         <div className="text-xs space-y-2">
                             <p>- Distributed at Charter to ~8 people</p>
