@@ -22,7 +22,7 @@ const ProjectDetailsModal: React.FC<ModalProps> = ({ isOpen, onClose, title, chi
           ✕
         </button>
         <div className="prose max-w-none">
-          <h2 className="text-2xl font-bold mb-4 text-charcoal">{title}</h2>
+          <h2 className="text-2xl font-bold mb-2 text-charcoal text-center">{title}</h2>
           {children}
         </div>
       </div>
