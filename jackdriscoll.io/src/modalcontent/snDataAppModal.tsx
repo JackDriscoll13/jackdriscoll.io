@@ -151,6 +151,16 @@ const SnDataAppModal: React.FC = () => {
         </div>
       </div>
     </div>
+    <h3 className="text-xl font-semibold mt-4">Additional Details</h3>
+    <p className="mt-1">
+        The platform is currently in production and being used by analysts and executives at Spectrum.
+    </p>
+    <p className="mt-1">
+      You can find some example code for the frontend<a href="https://github.com/JackDriscoll13/sn_reporting_app-frontend_expo" className="text-accent hover:text-accent/80"> here </a>
+      and some example code for the FastAPI middle layer<a href="https://github.com/JackDriscoll13/sn_reporting_app-backend_expo" className="text-accent hover:text-accent/80"> here</a>
+      . 
+    </p>
+
   </div>
   );
 };
