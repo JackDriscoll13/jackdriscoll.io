@@ -24,9 +24,17 @@ const QfreshenersModal: React.FC = () => {
             I have a friend who runs a small drop shipping business selling anciliary automotive products to various car businesses.
             He needed a way to quickly generate lists of leads for specific locations. I built this app to help him out.
         </p>
+        <h3 className="text-xl font-semibold mt-4">How it Works</h3>
+        <p className="mt-1">
+
+            For a quick overview, check out the <a href="https://github.com/JackDriscoll13/automotive_lead_engine?tab=readme-ov-file" className="text-accent font-medium hover:text-accent/80 hover:underline transition-colors">readme</a>.
+        </p>
+        <p className="mt-1">
+            For most of the technical details, read some rough documentation <a href="https://github.com/JackDriscoll13/automotive_lead_engine/blob/master/docs/docs.md" className="text-accent font-medium hover:text-accent/80 hover:underline transition-colors">here</a>.
+        </p>
 
         <h3 className="text-xl font-semibold mt-4">Feature Demo</h3>
-        <p className="text-xs text-gray-500 mb-2">*Note: Demo uses sample data</p>
+        <p className="text-xs text-gray-500 mb-2">*Note: Demo exemplifies the zip code feature and uses chat gpt to generate zip codes.</p>
         <div className="rounded-lg overflow-hidden">
           <video 
             className="w-full shadow-lg"
