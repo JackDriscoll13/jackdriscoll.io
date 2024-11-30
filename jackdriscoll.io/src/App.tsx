@@ -3,8 +3,7 @@ import { useEffect } from 'react';
 import Header from './components/header';
 import Footer from './components/footer.tsx';
 import About from './about.tsx';
-//import Projects from './projects.tsx';
-import Projects2 from './projects2.tsx';
+import Projects from './projects.tsx';
 import Ideas from './ideas.tsx';
 import NietzscheQuote from './components/Nietzsche-labryinth.tsx';
 import NotFoundPage from './components/NotFoundPage';
@@ -37,7 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LayoutWithHeaderFooter><About /></LayoutWithHeaderFooter>} />
         <Route path="/about" element={<LayoutWithHeaderFooter><About /></LayoutWithHeaderFooter>} />
-        <Route path="/projects" element={<LayoutWithHeaderFooter><Projects2 /></LayoutWithHeaderFooter>} />
+        <Route path="/projects" element={<LayoutWithHeaderFooter><Projects /></LayoutWithHeaderFooter>} />
         <Route path="/ideas" element={<LayoutWithHeaderFooter><Ideas /></LayoutWithHeaderFooter>} />
         <Route path="/nietzsche-quote" element={<LayoutWithHeaderFooter><NietzscheQuote /></LayoutWithHeaderFooter>} />
         <Route path="*" element={<NotFoundPage />} />
