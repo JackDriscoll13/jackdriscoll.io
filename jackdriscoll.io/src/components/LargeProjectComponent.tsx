@@ -2,20 +2,44 @@ import React, { useState } from 'react';
 import ProjectDetailsModal from './ProjectModalComponent';
 
 interface LargeProjectProps {
+    id: string;
     title: string;
     description: string;
     technologies: string[];
     modalContent: React.ReactNode; // Making this required since we'll always have a modal
   }
   
-  const LargeProjectComponent: React.FC<LargeProjectProps> = ({ title, description, technologies, modalContent }) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  const LargeProjectComponent: React.FC<LargeProjectProps> = ({ id, title, description, technologies, modalContent }) => {
+    const [isModalOpen, setIsModalOpen] = useState(() => {
+        // Check if the URL hash matches this modal's id on initial load
+        return window.location.hash === `#${id}`;
+    });
+  
+    // Add effect to handle hash changes
+    React.useEffect(() => {
+        const handleHashChange = () => {
+            setIsModalOpen(window.location.hash === `#${id}`);
+        };
+  
+        window.addEventListener('hashchange', handleHashChange);
+        return () => window.removeEventListener('hashchange', handleHashChange);
+    }, [id]);
+  
+    const openModal = () => {
+        window.location.hash = id;
+        setIsModalOpen(true);
+    };
+  
+    const closeModal = () => {
+        window.history.pushState(null, '', window.location.pathname);
+        setIsModalOpen(false);
+    };
   
     return (
       <>
         <div 
           className="w-full h-48 md:h-40 cursor-pointer transition-all duration-300 ease-in-out hover:ring-2 hover:ring-accent hover:shadow-lg rounded-lg"
-          onClick={() => setIsModalOpen(true)}
+          onClick={openModal}
         >
           <div className="w-full h-full bg-white shadow-md rounded-lg p-3 md:p-4 relative">
             <div className="flex justify-between items-start">
@@ -42,7 +66,7 @@ interface LargeProjectProps {
   
         <ProjectDetailsModal
           isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
+          onClose={closeModal}
           title={title}
         >
           {modalContent}

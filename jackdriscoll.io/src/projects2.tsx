@@ -14,6 +14,7 @@ const Projects2: React.FC = () => {
             {/* Main Projects Section */}
             <div className="flex flex-col items-center space-y-4 md:space-y-6 w-full px-2 md:px-8 mb-6 md:mb-8">
                 <LargeProjectComponent 
+                    id="sn-data-app"
                     title="Spectrum News Analytics App"
                     description="A full stack analytics application that lets non-technical users explore and report on viewership data. My largest, longest, and most impactful project to date."
                     technologies={['Python', 'FastAPI', 'Airflow', 'PostgreSQL', 'React', 'TypeScript', 'AWS']}
@@ -21,6 +22,7 @@ const Projects2: React.FC = () => {
                 />
 
                 <LargeProjectComponent 
+                    id="smb-lead-generator"
                     title="Lead Generator for a Small Business"
                     description="A public app I built for a small company. It allows sales people to generate long sheets of leads for precise locations. A simple project with a business impact."
                     technologies={['ReactJS', 'Python', 'FastAPI', 'Streaming Data', 'Google API']}
