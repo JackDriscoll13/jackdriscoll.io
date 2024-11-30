@@ -3,7 +3,6 @@ import React from 'react';
 const QfreshenersModal: React.FC = () => {
   return (
     <div>
-        <h4 className="text-lg font-semibold mb-2">TLDR</h4>
         <p className="text-sm mb-3 text-center flex items-center justify-center gap-2">
           <a href="https://qfresheners.com/leads" 
              className="text-accent font-medium hover:text-accent/80 hover:underline transition-colors">
