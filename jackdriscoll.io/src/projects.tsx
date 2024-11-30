@@ -43,8 +43,7 @@ const Projects: React.FC = () => {
                     backContent={
                         <div className="text-xs space-y-2">
                             <p>- Distributed at Charter to ~8 people</p>
-                            <p>- Built with raw Python in early 2023</p>
-                            <p>- Used when LLM context windows were very small</p>
+                            <p>- Built with raw Python in early 2023, when LLM context windows were very small</p>
                         </div>
                     }
                 />
