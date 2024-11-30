@@ -64,6 +64,20 @@ const Projects: React.FC = () => {
                     }
                 />
             </div>
+            {/* Publications Section */}
+            <h2 className="text-base md:text-lg font-extrabold mb-2 text-left text-charcoal">Publications</h2>
+              <div className="flex flex-col items-center space-y-6 w-full px-8">
+              <ul className="list-none w-full text-charcoal">
+                <li className="mb-2 flex items-start">
+                    <a href="https://www.tandfonline.com/doi/full/10.1080/1463922X.2022.2086644"
+                        target='_blank' 
+                        rel="noopener noreferrer" 
+                        className="text-xs hover:text-accent cursor-pointer underline decoration-accent">
+                            "Human-agent teaming and trust Calibration: a theoretical framework, configurable testbed, empirical illustration, and implications for the development of adaptive systems," Theoretical Issues in Ergonomics Science, Vol. 23, June 2022.
+                        </a>
+                </li>
+                </ul>
+            </div>
         </div>
     );
 };
