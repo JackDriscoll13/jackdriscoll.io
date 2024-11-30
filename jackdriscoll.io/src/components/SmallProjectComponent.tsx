@@ -72,22 +72,22 @@ const SmallProjectComponent: React.FC<SmallProjectProps> = ({
                 </div>
 
                 {/* Back of card */}
-                <div className="absolute w-full h-full bg-white text-charcoal shadow-md rounded-lg p-4 backface-hidden rotate-x-180">
+                <div className="absolute w-full h-full bg-white text-charcoal shadow-md rounded-lg p-3 backface-hidden rotate-x-180">
                     <div className="flex flex-col h-full">
-                        {/* Flip button - added to match front */}
-                        <div className="flex justify-end">
+                        {/* Flip button - moved to take less space */}
+                        <div className="flex justify-end mb-1">
                             <button className="text-[10px] text-accent hover:text-accent/80">
                                 Click to flip ↻
                             </button>
                         </div>
 
-                        {/* Main content area */}
-                        <div className="flex-1 flex flex-col justify-center">
+                        {/* Main content area - adjusted spacing */}
+                        <div className="flex-1">
                             {backContent}
                         </div>
                         
-                        {/* Footer area */}
-                        <div className="absolute bottom-2 left-4 right-4 flex justify-between items-center text-[10px] text-gray-500">
+                        {/* Footer area - adjusted positioning and padding */}
+                        <div className="absolute bottom-2 left-3 right-3 flex justify-between items-center text-[10px] text-gray-500">
                             <span>{title}</span>
                             {githubUrl && (
                                 <button 

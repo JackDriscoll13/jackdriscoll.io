@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
                     technologies={['Python', 'OpenAI API']}
                     githubUrl="https://github.com/JackDriscoll13/meeting_summarization_tool"
                     backContent={
-                        <div className="text-xs space-y-2">
+                        <div className="text-xs space-y-0.5">
                             <p>- Distributed at Charter to ~8 people</p>
                             <p>- Built with raw Python in early 2023, when LLM context windows were very small</p>
                         </div>
