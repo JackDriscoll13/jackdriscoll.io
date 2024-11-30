@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
             <div className="flex flex-col space-y-4 px-2 md:px-8 mb-6">
                 <SmallProjectComponent 
                     title="Meeting Summarization Tool"
-                    description="An OpenAI-powered tool for summarizing zoom meeting transcripts"
+                    description="An OpenAI-powered tool for summarizing zoom meeting transcripts."
                     technologies={['Python', 'OpenAI API']}
                     githubUrl="https://github.com/JackDriscoll13/meeting_summarization"
                     backContent={
@@ -52,7 +52,7 @@ const Projects: React.FC = () => {
                 
                 <SmallProjectComponent 
                     title="Personal Portfolio"
-                    description="This website! A simple site to share some of my work"
+                    description="This website. A simple site to share some of my work."
                     technologies={['React', 'TypeScript', 'Tailwind', 'AWS']}
                     githubUrl="https://github.com/JackDriscoll13/jackdriscoll.io"
                     backContent={
