@@ -17,7 +17,7 @@ interface LargeProjectProps {
           className="w-full h-48 md:h-40 cursor-pointer transition-all duration-300 ease-in-out hover:ring-2 hover:ring-accent hover:shadow-lg rounded-lg"
           onClick={() => setIsModalOpen(true)}
         >
-          <div className="w-full h-full bg-white shadow-md rounded-lg p-3 md:p-4">
+          <div className="w-full h-full bg-white shadow-md rounded-lg p-3 md:p-4 relative">
             <div className="flex justify-between items-start">
               <h2 className="text-base md:text-lg font-semibold mb-2 text-charcoal">{title}</h2>
               <button className="text-[10px] md:text-xs text-accent hover:text-accent/80">
