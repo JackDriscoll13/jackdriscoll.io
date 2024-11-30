@@ -2,7 +2,9 @@ import React from 'react';
 
 import LargeProjectComponent from './components/LargeProjectComponent';
 import SmallProjectComponent from './components/SmallProjectComponent';
+// Modal Content
 import SnDataAppModal from './modalcontent/snDataAppModal';
+import QfreshenersModal from './modalcontent/qfreshenersModal';
 
 const Projects2: React.FC = () => {
     return (
@@ -20,13 +22,10 @@ const Projects2: React.FC = () => {
 
                 <LargeProjectComponent 
                     title="Lead Generator for a Small Business"
-                    description="A public app I built for a small company. It allows sales people to generate long sheets of leads for precise locations. A simple project with a big business impact."
+                    description="A public app I built for a small company. It allows sales people to generate long sheets of leads for precise locations. A simple project with a business impact."
                     technologies={['ReactJS', 'Python', 'FastAPI', 'Streaming Data', 'Google API']}
                     modalContent={
-                        <div className="prose">
-                            <p>You can try the app yourself at <a href="https://qfresheners.com/leads" className="text-accent hover:text-accent/80">qfresheners.com/leads</a></p>
-                            <p>View the code on <a href="https://github.com/JackDriscoll13/automotive_lead_engine" className="text-accent hover:text-accent/80">GitHub</a></p>
-                        </div>
+                        <QfreshenersModal />
                     }
                 />
             </div>
