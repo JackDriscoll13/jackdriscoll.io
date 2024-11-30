@@ -25,6 +25,9 @@ const QfreshenersModal: React.FC = () => {
             He needed a way to quickly generate lists of leads for specific locations. I built this app to help him out.
         </p>
         <h3 className="text-xl font-semibold mt-4">How it Works</h3>
+        <p>
+            The app has a react frontend and a minimal fastapi backend. 
+        </p>
         <p className="mt-1">
 
             For a quick overview, check out the <a href="https://github.com/JackDriscoll13/automotive_lead_engine?tab=readme-ov-file" className="text-accent font-medium hover:text-accent/80 hover:underline transition-colors">readme</a>.
