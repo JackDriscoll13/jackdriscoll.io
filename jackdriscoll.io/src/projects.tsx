@@ -39,24 +39,27 @@ const Projects: React.FC = () => {
                     title="Meeting Summarization Tool"
                     description="An OpenAI-powered tool for summarizing zoom meeting transcripts"
                     technologies={['Python', 'OpenAI API']}
-                    githubUrl="https://github.com/JackDriscoll13/meeting_summarization_tool"
+                    githubUrl="https://github.com/JackDriscoll13/meeting_summarization"
                     backContent={
                         <div className="text-xs space-y-0.5">
-                            <p>- Distributed at Charter to ~8 people</p>
+                            <p>- Chunks meeting transcripts and feeds them to OpenAI API for summarization</p>
                             <p>- Built with raw Python in early 2023, when LLM context windows were very small</p>
+                            <p>- Distributed at Charter (Spectrum) to ~8 people, mostly my immediate team</p>
+                            
                         </div>
                     }
                 />
                 
                 <SmallProjectComponent 
                     title="Personal Portfolio"
-                    description="This website!"
+                    description="This website! A simple site to share some of my work"
                     technologies={['React', 'TypeScript', 'Tailwind', 'AWS']}
+                    githubUrl="https://github.com/JackDriscoll13/jackdriscoll.io"
                     backContent={
-                        <div className="text-xs space-y-2">
+                        <div className="text-xs space-y-0.5">
                             <p>- Built with React, TypeScript, and Tailwind CSS</p>
-                            <p>- Deployed with AWS + Docker</p>
-                            <p>- Uses Github Actions for CD</p>
+                            <p>- Deployed with AWS + Docker, uses Github Actions for quick and easy CD</p>
+                            <p>- Includes a logging system that tracks site traffic and uploads logs to s3 for analysis</p>
                         </div>
                     }
                 />
