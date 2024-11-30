@@ -26,7 +26,7 @@ const QfreshenersModal: React.FC = () => {
         </p>
         <h3 className="text-xl font-semibold mt-4">How it Works</h3>
         <p>
-            The app has a react frontend and a minimal fastapi backend. 
+            The app has a react frontend and a minimal fastapi backend, which processes requests/responses to/from the Google Places API. 
         </p>
         <p className="mt-1">
 
