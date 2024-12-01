@@ -79,7 +79,7 @@ const SmallProjectComponent: React.FC<SmallProjectProps> = ({
                     </button>
 
                     {/* Main content area - starts from top now */}
-                    <div className="pt-1">
+                    <div className="pt-1 text-[8px] md:text-xs">
                         {backContent}
                     </div>
                     

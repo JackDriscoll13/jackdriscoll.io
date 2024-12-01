@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
                     technologies={['Python', 'OpenAI API']}
                     githubUrl="https://github.com/JackDriscoll13/meeting_summarization"
                     backContent={
-                        <div className="text-xs space-y-0.5">
+                        <div className="text-[8px] md:text-xs space-y-0.5">
                             <p>- Chunks meeting transcripts and feeds them to OpenAI API for summarization</p>
                             <p>- Built with raw Python in early 2023, when LLM context windows were very small</p>
                             <p>- Distributed at Charter (Spectrum) to ~8 people, mostly my immediate team</p>
@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
                     technologies={['React', 'TypeScript', 'Tailwind', 'AWS']}
                     githubUrl="https://github.com/JackDriscoll13/jackdriscoll.io"
                     backContent={
-                        <div className="text-xs space-y-0.5">
+                        <div className="space-y-0.5 text-[8px] md:text-xs">
                             <p>- Built with React, TypeScript, and Tailwind CSS</p>
                             <p>- Deployed with AWS + Docker, uses Github Actions for quick and easy CD</p>
                             <p>- Includes a logging system that tracks site traffic and uploads logs to s3 for analysis</p>
