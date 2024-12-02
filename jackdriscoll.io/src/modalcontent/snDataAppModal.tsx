@@ -24,13 +24,10 @@ const SnDataAppModal: React.FC = () => {
         </p>
         <h3 className="text-xl font-semibold mb-2">Background</h3>
         <p>
-            If you are a Spectrum Cable customer, you have access to an exclusive product called Spectrum News. 
-            Spectrum News serves as a retention product for Spectrum and operates at a net loss for the company. 
+        Spectrum News is an exclusive product for Spectrum Cable customers, serving as a retention tool despite operating at a net loss. However, its performance—and that of its competitors—has garnered significant interest from Spectrum teams, particularly analysts and executives in the 2,000-person Spectrum News business unit.
         </p>
         <p className="mt-1">
-            However, many teams and analysts at Spectrum are interested in the performance of Spectrum News and its competitors, especially in the context
-            of what has been happening in the media industry over the last decade. This includes a team of analysts that operate
-            within the 2000 person Spectrum News business unit.
+        Amid rapid changes in the media industry over the past decade, these analysts and executive teams rely heavily on performance data to drive insights and strategy.
         </p>
         <h3 className="text-xl font-semibold mt-4">The Problem</h3>
         <p className="mt-1">
