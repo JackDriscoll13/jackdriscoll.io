@@ -55,7 +55,7 @@ const Ideas: React.FC = () => {
             </li>
             <li className="mb-2 flex">
                 <span className="mr-2 flex-shrink-0">-</span>
-                <span>In 90% of the cases I've encountered, functional programming makes more sense to me than OOP</span>
+                <span>I find functional programming to be more intuitive than OOP. IMO it's conducive to cleaner, more maintainable code in many situations, but I recognize the value and power of OOP when the context calls for it.</span>
             </li>
             <li className="mb-2 flex">
                 <span className="mr-2 flex-shrink-0">-</span>
