@@ -14,6 +14,9 @@ export default {
       perspective: {
         '1000': '1000px',
       },
+      fontFamily: {
+        sans: ['"IBM Plex Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+      },
     },
   },
   plugins: [

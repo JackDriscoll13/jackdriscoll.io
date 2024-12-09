@@ -75,7 +75,7 @@ const Projects: React.FC = () => {
                         className="text-xs hover:text-accent cursor-pointer underline decoration-accent">
                             "Human-agent teaming and trust Calibration: a theoretical framework, configurable testbed, empirical illustration, and implications for the development of adaptive systems," Theoretical Issues in Ergonomics Science, Vol. 23, June 2022.
                         </a>
-                </li>
+                    </li>
                 </ul>
             </div>
         </div>

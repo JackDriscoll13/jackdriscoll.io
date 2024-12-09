@@ -18,7 +18,7 @@ const About: React.FC = () => {
         where I focus on ingestion, processing, and 
         predictive analytics with viewership data. Recently, I developed an 
         <Link to="/projects#sn-data-app" className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
-          internal data app
+          internal analytics app
         </Link>
         that lets product teams explore and report out key performance metrics.
       </p>
