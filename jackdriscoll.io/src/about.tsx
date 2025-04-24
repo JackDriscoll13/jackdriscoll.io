@@ -15,8 +15,7 @@ const About: React.FC = () => {
         className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
         Spectrum
         </a>
-        where I focus on ingestion, processing, and 
-        predictive analytics with viewership data. Recently, I developed an 
+        , where I design and deploy full-stack data systems to process, model, and deliver insights from large-scale viewership data. Recently, I developed an 
         <Link to="/projects#sn-data-app" className="underline decoration-accent font-medium hover:text-accent cursor-pointer mx-1">
           internal analytics app
         </Link>

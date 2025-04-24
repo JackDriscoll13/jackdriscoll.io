@@ -51,19 +51,19 @@ const Ideas: React.FC = () => {
         <ul className="list-none pl-0">
             <li className="mb-2 flex">
                 <span className="mr-2 flex-shrink-0">-</span>
+                <span>You don't "master" programming concepts just like you don't "master" programming languages. You understand them vaguely when you read/watch about them, you go and apply them numerous times in a project and then you continuously improve on that.</span>
+            </li>
+            <li className="mb-2 flex">
+                <span className="mr-2 flex-shrink-0">-</span>
+                <span>AI can help you write code faster, scaffold projects, and debug unfamiliar problems — but if you only take the shortcut, you miss out on building the mental models that make you a better engineer. The real value comes from wrestling with a system until you understand how and why it works.</span>
+            </li>
+            <li className="mb-2 flex">
+                <span className="mr-2 flex-shrink-0">-</span>
                 <span>Static Types (and docstrings) are very useful {`->`} I like working with them </span>
             </li>
             <li className="mb-2 flex">
                 <span className="mr-2 flex-shrink-0">-</span>
-                <span>I find functional programming to be more intuitive than OOP. IMO it's conducive to cleaner, more maintainable code in many situations, but I recognize the value and power of OOP when the context calls for it.</span>
-            </li>
-            <li className="mb-2 flex">
-                <span className="mr-2 flex-shrink-0">-</span>
-                <span>You don't "master" programming concepts just like you don't "master" programming languages. You understand them vaguely when you read/watch about them, you go and apply them numerous times in a project and then you continuously improve on that</span>
-            </li>
-            <li className="mb-2 flex">
-                <span className="mr-2 flex-shrink-0">-</span>
-                <span>Ship something, anything, then iterate</span>
+                <span>Ship quickly. Iterate fast.</span>
             </li>
         </ul>
     </div>
