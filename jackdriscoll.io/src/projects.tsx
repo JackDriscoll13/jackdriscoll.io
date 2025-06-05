@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
                 <LargeProjectComponent 
                     id="smb-lead-generator"
                     title="Lead Generator for a Small Business"
-                    description="An app I built for a small company. It allows sales people to generate long sheets of leads for precise locations. A simple project with a business impact."
+                    description="An app I built for a friends company. It allows sales people to generate long sheets of leads for precise locations. A simple project with a business impact."
                     technologies={['ReactJS', 'Python', 'FastAPI', 'Streaming Data', 'Google API', 'Docker', 'AWS']}
                     modalContent={
                         <QfreshenersModal />
