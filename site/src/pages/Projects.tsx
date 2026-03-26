@@ -26,7 +26,6 @@ const projects: Project[] = [
     details: [
       "Deploys fleets of EC2 workers to observe when restaurants release tables, learns drop patterns over time, and executes bookings within milliseconds",
       "Dual-database architecture — Supabase for shared state, local SQLite for mission-critical scheduling",
-      "Uses Chrome TLS impersonation to work with Resy's API",
       "Invite-only frontend with email OTP auth, snipe scheduling, admin dashboard, and community features",
     ],
     link: { url: "https://www.blackhorsereserve.com", label: "blackhorsereserve.com" },
@@ -54,7 +53,7 @@ const projects: Project[] = [
     year: "2024–present",
   },
   {
-    title: "Interval Timer",
+    title: "Kettlebell Interval Timer",
     description:
       "A free iOS app for timing kettlebell workouts and interval-based exercises. No ads, no subscriptions.",
     tech: ["Swift", "iOS"],
@@ -62,6 +61,7 @@ const projects: Project[] = [
       "Built to solve my own problem — needed a clean timer for kettlebell and core workouts",
       "Native iOS, designed for simplicity",
     ],
+    link: { url: "https://apps.apple.com/us/app/kettlebell-interval-timer/id6759739598", label: "App Store" },
     year: "2026",
   },
   {

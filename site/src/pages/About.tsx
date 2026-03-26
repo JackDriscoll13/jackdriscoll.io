@@ -5,7 +5,18 @@ export default function About() {
         I'm Jack. I build software.
       </p>
       <p>
-        I recently started{" "}
+        During the day, I work at{" "}
+        <a
+          href="https://en.wikipedia.org/wiki/Spectrum_(brand)"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ borderBottom: "1px solid var(--border)" }}
+        >
+          Spectrum
+        </a>{" "}
+        building full-stack data systems — my biggest project there is an internal
+        analytics app that lets product teams explore and report on large-scale
+        viewership data. On the side, I started{" "}
         <a
           href="https://umako.co"
           target="_blank"
@@ -15,18 +26,7 @@ export default function About() {
           Umako Labs
         </a>
         , a small software company where I build custom applications for
-        clients. Before that, I spent two years at{" "}
-        <a
-          href="https://en.wikipedia.org/wiki/Spectrum_(brand)"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ borderBottom: "1px solid var(--border)" }}
-        >
-          Spectrum
-        </a>{" "}
-        building full-stack data systems — my biggest project was an internal
-        analytics app that lets product teams explore and report on large-scale
-        viewership data.
+        clients. We're currently working on 2 projects.
       </p>
       <p>
         On my own time, I build things that interest me. Lately that's been an{" "}
