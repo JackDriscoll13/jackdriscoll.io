@@ -113,8 +113,27 @@ function EmailModal({ onClose }: { onClose: () => void }) {
   );
 }
 
+function getTheme(): "dark" | "light" {
+  return document.documentElement.getAttribute("data-theme") === "light"
+    ? "light"
+    : "dark";
+}
+
 export default function Footer() {
   const [showEmail, setShowEmail] = useState(false);
+  const [theme, setTheme] = useState<"dark" | "light">(getTheme);
+
+  function flipTheme() {
+    const next = theme === "dark" ? "light" : "dark";
+    if (next === "light") {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+      localStorage.removeItem("theme");
+    }
+    setTheme(next);
+  }
 
   return (
     <>
@@ -163,6 +182,23 @@ export default function Footer() {
             {label}
           </a>
         ))}
+        <button
+          onClick={flipTheme}
+          style={{
+            ...footerLinkStyle,
+            marginLeft: "auto",
+            background: "none",
+            border: "none",
+          }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.color = "var(--text)")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.color = "var(--text-muted)")
+          }
+        >
+          {theme === "dark" ? "Light" : "Dark"}
+        </button>
       </footer>
       {showEmail && <EmailModal onClose={() => setShowEmail(false)} />}
     </>
