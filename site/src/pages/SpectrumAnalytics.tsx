@@ -120,8 +120,7 @@ export default function SpectrumAnalytics() {
           paddingLeft: "0.75rem",
         }}
       >
-        I've obtained permission to share details of this project but have taken
-        care to remove sensitive information.{" "}
+        Published with permission. Sensitive information has been removed.{" "}
         <a
           href="https://github.com/JackDriscoll13/sn_reporting_app-frontend_expo"
           target="_blank"
@@ -158,11 +157,11 @@ export default function SpectrumAnalytics() {
         </p>
       </section>
 
-      {/* What I built */}
+      {/* What we built */}
       <section style={{ marginBottom: sectionGap }}>
-        <h2 style={h2Style}>What I built</h2>
+        <h2 style={h2Style}>What we built</h2>
         <p style={pStyle}>
-          Over six months, I designed and built a full-stack analytics platform
+          Over six months, we designed and built a full-stack analytics platform
           in an isolated AWS environment. The goal was to centralize viewership
           data from multiple sources into a single system with automated
           pipelines, validated data, and a dashboard that non-technical users
@@ -174,18 +173,18 @@ export default function SpectrumAnalytics() {
       <section style={{ marginBottom: sectionGap }}>
         <h2 style={h2Style}>Architecture</h2>
         <p style={pStyle}>
-          Data flows from three sources on the left into an Airflow orchestration
+          Data flows from four sources on the left into an Airflow orchestration
           server that runs daily, weekly, and monthly batch loads into a
           PostgreSQL database inside our VPC. A FastAPI backend serves processed
           data to a React frontend, with Caddy handling TLS and reverse proxying.
         </p>
         <SpectrumDiagram />
         <p style={pStyle}>
-          By owning the full pipeline from source to presentation, we could
+          By owning the full pipeline from source to presentation, we can
           validate data at every step and catch upstream quality issues before
-          they reached stakeholders. The orchestration layer handles the
-          complexity of pulling from Redshift, on-prem Hadoop, and third-party
-          Nielsen feeds on different schedules.
+          they reach stakeholders. The orchestration layer handles the
+          complexity of pulling from Redshift, on-prem Hadoop, Nielsen feeds,
+          and social media APIs on different schedules.
         </p>
       </section>
 
@@ -196,11 +195,7 @@ export default function SpectrumAnalytics() {
           {[
             {
               decision: "Isolated PostgreSQL over querying Redshift directly",
-              why: "Redshift queries were slow and expensive for interactive use. A dedicated RDS instance let us pre-compute and validate data, giving the dashboard sub-second response times.",
-            },
-            {
-              decision: "Custom auth instead of an off-the-shelf solution",
-              why: "Charter's SSO approval process was months out. I built JWT auth with email verification so we could ship and onboard users immediately, with SSO as a future migration.",
+              why: "Redshift queries were slow and expensive for interactive use. A dedicated RDS instance lets us pre-compute and validate data, giving the dashboard sub-second response times.",
             },
             {
               decision: "FastAPI with Pandas for the middle layer",
@@ -208,7 +203,7 @@ export default function SpectrumAnalytics() {
             },
             {
               decision: "Airflow for orchestration",
-              why: "Multiple data sources on different schedules with dependencies between them. Airflow let us define DAGs for daily, weekly, and monthly loads with automatic retry and alerting on failures.",
+              why: "Multiple data sources on different schedules with dependencies between them. Airflow lets us define DAGs for daily, weekly, and monthly loads with automatic retry and alerting on failures.",
             },
           ].map(({ decision, why }) => (
             <div key={decision}>

@@ -170,30 +170,37 @@ export default function SpectrumDiagram() {
       }}
     >
       <svg
-        viewBox="0 0 720 380"
+        viewBox="0 0 720 420"
         style={{
           width: "100%",
           minWidth: 500,
           height: "auto",
         }}
       >
+        {/* Data Sources label */}
+        <text x={60} y={25} style={{ ...subLabelStyle, fontSize: 10, textAnchor: "start", fill: accentColor }}>
+          Data Sources
+        </text>
+
         {/* Data Sources */}
         <Node x={10} y={40} w={130} h={50} label="Redshift Datalake" subLabel="Spectrum viewership" />
         <Node x={10} y={120} w={130} h={50} label="Hadoop On-Prem" subLabel="Legacy data" />
         <Node x={10} y={200} w={130} h={50} label="Nielsen API" subLabel="Third-party ratings" />
+        <Node x={10} y={280} w={130} h={50} label="Social Media APIs" subLabel="Platform metrics" />
 
         {/* Orchestration */}
-        <Node x={220} y={110} w={140} h={60} label="Orchestration Server" subLabel="Airflow + API triggers" accent />
+        <Node x={220} y={145} w={140} h={60} label="Orchestration Server" subLabel="Airflow + API triggers" accent />
 
         {/* Arrows: sources → orchestration */}
-        <Arrow x1={140} y1={65} x2={220} y2={130} />
-        <Arrow x1={140} y1={145} x2={220} y2={140} />
-        <Arrow x1={140} y1={225} x2={220} y2={155} />
+        <Arrow x1={140} y1={65} x2={220} y2={162} />
+        <Arrow x1={140} y1={145} x2={220} y2={172} />
+        <Arrow x1={140} y1={225} x2={220} y2={182} />
+        <Arrow x1={140} y1={305} x2={220} y2={192} />
 
         {/* Batch label */}
         <text
           x={290}
-          y={195}
+          y={230}
           style={{
             ...subLabelStyle,
             fontSize: 8,
@@ -204,32 +211,25 @@ export default function SpectrumDiagram() {
         </text>
 
         {/* AWS VPC group */}
-        <GroupBox x={430} y={10} w={280} h={360} label="AWS VPC" />
+        <GroupBox x={430} y={20} w={270} h={390} label="AWS VPC" />
 
         {/* Arrow: orchestration → RDS */}
-        <Arrow x1={360} y1={145} x2={430} y2={240} label="batch loads" />
-
-        {/* Nodes inside VPC */}
-        <Node x={460} y={35} w={220} h={50} label="Frontend" subLabel="React + TypeScript, Caddy" />
-        <Node x={460} y={115} w={220} h={50} label="Backend API" subLabel="FastAPI + Gunicorn" />
-        <Node x={460} y={205} w={140} h={50} label="PostgreSQL" subLabel="AWS RDS" accent />
-        <Node x={460} y={290} w={140} h={50} label="S3 Bucket" subLabel="Files + GeoJSON + logs" />
-        <Node x={620} y={205} w={70} h={50} label="S3" subLabel="Backups" />
+        <Arrow x1={360} y1={178} x2={430} y2={268} label="batch loads" />
 
         {/* Internet gateway */}
-        <Node x={530} y={-25} w={100} h={30} label="Internet" subLabel="" />
-        <Arrow x1={580} y1={5} x2={570} y2={35} />
+        <Node x={520} y={2} w={100} h={28} label="Internet" />
+        <Arrow x1={570} y1={30} x2={570} y2={50} />
+
+        {/* Nodes inside VPC */}
+        <Node x={460} y={50} w={220} h={50} label="Frontend" subLabel="React + TypeScript, Caddy" />
+        <Node x={460} y={135} w={220} h={50} label="Backend API" subLabel="FastAPI + Gunicorn" />
+        <Node x={460} y={240} w={220} h={50} label="PostgreSQL" subLabel="AWS RDS" accent />
+        <Node x={460} y={335} w={220} h={50} label="S3" subLabel="GeoJSON, files, backups, logs" />
 
         {/* Internal arrows */}
-        <Arrow x1={570} y1={85} x2={570} y2={115} />
-        <Arrow x1={570} y1={165} x2={530} y2={205} />
-        <Arrow x1={570} y1={165} x2={530} y2={290} />
-        <Arrow x1={600} y1={230} x2={620} y2={230} />
-
-        {/* Labels for data flow direction */}
-        <text x={60} y={25} style={{ ...subLabelStyle, fontSize: 10, textAnchor: "start", fill: accentColor }}>
-          Data Sources
-        </text>
+        <Arrow x1={570} y1={100} x2={570} y2={135} />
+        <Arrow x1={570} y1={185} x2={570} y2={240} />
+        <Arrow x1={570} y1={290} x2={570} y2={335} />
       </svg>
     </div>
   );

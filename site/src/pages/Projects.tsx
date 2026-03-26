@@ -46,7 +46,7 @@ const projects: Project[] = [
       "AWS",
     ],
     details: [
-      "Built over two years at Spectrum — my largest and longest-running project",
+      "Built over two years at Spectrum, the largest and longest-running project on this list",
       "Interactive coverage maps, engagement analytics with 8+ views, Nielsen daily reporting, data export",
       "Custom JWT auth, automated data pipelines with APScheduler, admin console",
       "Sanitized code samples shared publicly with permission from Spectrum",
