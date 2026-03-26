@@ -15,17 +15,16 @@ export default function About() {
         on the side.
       </p>
       <p>
-        My biggest project at Spectrum is an{" "}
+        At Spectrum, I built an{" "}
         <a
           href="/projects/spectrum-analytics"
           style={{ borderBottom: "1px solid var(--border)" }}
         >
           internal analytics app
         </a>{" "}
-        that lets product teams
-        explore and report on large-scale viewership data. Through Umako Labs, I
-        build custom applications and AI integrations for clients. We're currently working on 2
-        projects.
+        that lets product teams explore and report on large-scale viewership
+        data. Through Umako Labs, I build custom applications for clients.
+        We're currently working on 2 active projects.
       </p>
       <p>
         I also like to build and ship independent projects. Lately that's been

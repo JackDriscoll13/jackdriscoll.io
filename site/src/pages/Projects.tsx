@@ -75,7 +75,6 @@ const projects: Project[] = [
       "Built for a friend's company that sells to automotive businesses",
       "Analytics dashboard for tracking API usage",
     ],
-    link: { url: "https://www.qfresheners.com/leads", label: "qfresheners.com/leads" },
     github: "https://github.com/JackDriscoll13/automotive_lead_engine",
     year: "2024",
   },
@@ -206,16 +205,6 @@ function ProjectCard({ project }: { project: Project }) {
 
       {(project.link || project.github || project.detailRoute) && (
         <div style={{ display: "flex", gap: "1rem" }}>
-          {project.detailRoute && (
-            <Link
-              to={project.detailRoute}
-              style={linkStyle}
-              onMouseEnter={hoverIn}
-              onMouseLeave={hoverOut}
-            >
-              Read more
-            </Link>
-          )}
           {project.link && (
             <a
               href={project.link.url}
@@ -227,6 +216,16 @@ function ProjectCard({ project }: { project: Project }) {
             >
               {project.link.label}
             </a>
+          )}
+          {project.detailRoute && (
+            <Link
+              to={project.detailRoute}
+              style={linkStyle}
+              onMouseEnter={hoverIn}
+              onMouseLeave={hoverOut}
+            >
+              Read more
+            </Link>
           )}
           {project.github && (
             <a

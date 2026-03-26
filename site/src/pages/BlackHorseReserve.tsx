@@ -130,12 +130,12 @@ export default function BlackHorseReserve() {
               why: "Supabase handles all shared state between the frontend and backend. But scheduling is mission-critical. If Supabase has a momentary outage, I can't afford to miss a booking window. The Manager keeps its own SQLite database for active schedules and job execution records. If the network drops, scheduled jobs still fire on time.",
             },
             {
-              decision: "Email OTP with invite-only access",
-              why: "This isn't a public product. Access is controlled through Supabase's email OTP flow configured so only pre-invited users can log in. Admins invite users through edge functions, and invite links go through a dedicated redemption flow. It keeps the user base small and intentional.",
-            },
-            {
               decision: "Monthly snipe quotas enforced at the database level",
               why: "Each user gets a fixed number of booking attempts per month. The quota is enforced through RLS policies and a centralized config table in Supabase, so it can't be bypassed from the client. This keeps resource usage manageable and EC2 costs predictable.",
+            },
+            {
+              decision: "CloudWatch for observability across ephemeral fleets",
+              why: "Every worker in every fleet logs to CloudWatch, giving centralized visibility across instances that spin up and tear down dynamically. Without this, debugging a failed booking attempt across a fleet of short-lived EC2 instances would be nearly impossible.",
             },
           ].map(({ decision, why }) => (
             <div key={decision}>
