@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface Project {
   title: string;
@@ -7,6 +8,7 @@ interface Project {
   details: string[];
   link?: { url: string; label: string };
   github?: string;
+  detailRoute?: string;
   year: string;
 }
 
@@ -25,7 +27,7 @@ const projects: Project[] = [
     ],
     details: [
       "Deploys fleets of EC2 workers to observe when restaurants release tables, learns drop patterns over time, and executes bookings within milliseconds",
-      "Dual-database architecture — Supabase for shared state, local SQLite for mission-critical scheduling",
+      "Dual-database architecture. Supabase for shared state. Local SQLite for jobs and scheduling.",
       "Invite-only frontend with email OTP auth, snipe scheduling, admin dashboard, and community features",
     ],
     link: { url: "https://www.blackhorsereserve.com", label: "blackhorsereserve.com" },
@@ -50,6 +52,7 @@ const projects: Project[] = [
       "Sanitized code samples shared publicly with permission from Spectrum",
     ],
     github: "https://github.com/JackDriscoll13/sn_reporting_app-frontend_expo",
+    detailRoute: "/projects/spectrum-analytics",
     year: "2024–present",
   },
   {
@@ -167,26 +170,48 @@ function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      <button
-        onClick={() => setExpanded(!expanded)}
-        style={{
-          background: "none",
-          border: "none",
-          color: "var(--text-muted)",
-          fontSize: "0.8rem",
-          cursor: "pointer",
-          padding: 0,
-          transition: "color 0.15s ease",
-        }}
-        onMouseEnter={(e) =>
-          (e.currentTarget.style.color = "var(--text)")
-        }
-        onMouseLeave={(e) =>
-          (e.currentTarget.style.color = "var(--text-muted)")
-        }
-      >
-        {expanded ? "Less" : "More"}
-      </button>
+      <div style={{ display: "flex", gap: "1rem", alignItems: "baseline" }}>
+        <button
+          onClick={() => setExpanded(!expanded)}
+          style={{
+            background: "none",
+            border: "none",
+            color: "var(--text-muted)",
+            fontSize: "0.8rem",
+            cursor: "pointer",
+            padding: 0,
+            transition: "color 0.15s ease",
+          }}
+          onMouseEnter={(e) =>
+            (e.currentTarget.style.color = "var(--text)")
+          }
+          onMouseLeave={(e) =>
+            (e.currentTarget.style.color = "var(--text-muted)")
+          }
+        >
+          {expanded ? "Less" : "More"}
+        </button>
+        {project.detailRoute && (
+          <Link
+            to={project.detailRoute}
+            style={{
+              fontSize: "0.8rem",
+              color: "var(--text-muted)",
+              textDecoration: "none",
+              borderBottom: "1px solid var(--border)",
+              transition: "color 0.15s ease",
+            }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.color = "var(--text)")
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = "var(--text-muted)")
+            }
+          >
+            Read more
+          </Link>
+        )}
+      </div>
 
       <div
         style={{

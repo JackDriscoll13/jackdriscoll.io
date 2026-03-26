@@ -2,10 +2,7 @@ export default function About() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
       <p>
-        I'm Jack. I build software.
-      </p>
-      <p>
-        During the day, I work at{" "}
+        I'm a product-oriented software engineer. I work at{" "}
         <a
           href="https://en.wikipedia.org/wiki/Spectrum_(brand)"
           target="_blank"
@@ -14,9 +11,7 @@ export default function About() {
         >
           Spectrum
         </a>{" "}
-        building full-stack data systems — my biggest project there is an internal
-        analytics app that lets product teams explore and report on large-scale
-        viewership data. On the side, I started{" "}
+        building data systems and run{" "}
         <a
           href="https://umako.co"
           target="_blank"
@@ -24,13 +19,19 @@ export default function About() {
           style={{ borderBottom: "1px solid var(--border)" }}
         >
           Umako Labs
-        </a>
-        , a small software company where I build custom applications for
-        clients. We're currently working on 2 projects.
+        </a>{" "}
+        on the side.
       </p>
       <p>
-        On my own time, I build things that interest me. Lately that's been an{" "}
-        automated restaurant reservation system and a native iOS workout timer.
+        At Spectrum, I built an internal analytics app that lets product teams
+        explore and report on large-scale viewership data. Through Umako Labs, I
+        build custom applications for clients. We're currently working on 2
+        projects.
+      </p>
+      <p>
+        I also like to build and ship independent projects. Lately that's been
+        an automated restaurant reservation system and a native iOS workout
+        timer.
       </p>
       <p>
         I studied data science, business, and psychology at the{" "}
@@ -42,14 +43,14 @@ export default function About() {
         >
           University of Colorado
         </a>
-        , where I also did{" "}
+        , where I did{" "}
         <a
           href="https://www.colorado.edu/lab/shine/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ borderBottom: "1px solid var(--border)" }}
         >
-          Human-Computer Interaction research
+          HCI research
         </a>{" "}
         and co-authored a{" "}
         <a
@@ -60,12 +61,9 @@ export default function About() {
         >
           paper
         </a>{" "}
-        on AI collaboration and trust using brain imaging.
+        on AI collaboration and trust.
       </p>
-      <p style={{ color: "var(--text-muted)" }}>
-        When I'm not at a keyboard, I like listening to podcasts, skiing, and
-        having long dinners with friends. I live in lower Manhattan.
-      </p>
+      <p style={{ color: "var(--text-muted)" }}>I live in lower Manhattan.</p>
     </div>
   );
 }
