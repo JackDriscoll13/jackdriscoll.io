@@ -51,7 +51,6 @@ const projects: Project[] = [
       "Custom JWT auth, automated data pipelines with APScheduler, admin console",
       "Sanitized code samples shared publicly with permission from Spectrum",
     ],
-    github: "https://github.com/JackDriscoll13/sn_reporting_app-frontend_expo",
     detailRoute: "/projects/spectrum-analytics",
     year: "2024–present",
   },

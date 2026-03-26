@@ -170,7 +170,7 @@ export default function SpectrumDiagram() {
       }}
     >
       <svg
-        viewBox="0 0 720 420"
+        viewBox="0 0 720 340"
         style={{
           width: "100%",
           minWidth: 500,
@@ -211,7 +211,7 @@ export default function SpectrumDiagram() {
         </text>
 
         {/* AWS VPC group */}
-        <GroupBox x={430} y={20} w={270} h={390} label="AWS VPC" />
+        <GroupBox x={430} y={20} w={270} h={290} label="AWS VPC" />
 
         {/* Arrow: orchestration → RDS */}
         <Arrow x1={360} y1={178} x2={430} y2={268} label="batch loads" />
@@ -223,13 +223,13 @@ export default function SpectrumDiagram() {
         {/* Nodes inside VPC */}
         <Node x={460} y={50} w={220} h={50} label="Frontend" subLabel="React + TypeScript, Caddy" />
         <Node x={460} y={135} w={220} h={50} label="Backend API" subLabel="FastAPI + Gunicorn" />
-        <Node x={460} y={240} w={220} h={50} label="PostgreSQL" subLabel="AWS RDS" accent />
-        <Node x={460} y={335} w={220} h={50} label="S3" subLabel="GeoJSON, files, backups, logs" />
+        <Node x={460} y={240} w={100} h={50} label="PostgreSQL" subLabel="AWS RDS" accent />
+        <Node x={580} y={240} w={100} h={50} label="S3" subLabel="Files, GeoJSON, logs" />
 
         {/* Internal arrows */}
         <Arrow x1={570} y1={100} x2={570} y2={135} />
-        <Arrow x1={570} y1={185} x2={570} y2={240} />
-        <Arrow x1={570} y1={290} x2={570} y2={335} />
+        <Arrow x1={530} y1={185} x2={510} y2={240} />
+        <Arrow x1={610} y1={185} x2={630} y2={240} />
       </svg>
     </div>
   );

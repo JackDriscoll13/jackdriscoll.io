@@ -25,7 +25,7 @@ export default function About() {
       <p>
         At Spectrum, I built an internal analytics app that lets product teams
         explore and report on large-scale viewership data. Through Umako Labs, I
-        build custom applications for clients. We're currently working on 2
+        build custom applications and AI integrations for clients. We're currently working on 2
         projects.
       </p>
       <p>

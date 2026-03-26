@@ -110,36 +110,6 @@ export default function SpectrumAnalytics() {
         2024 – present · React, TypeScript, FastAPI, PostgreSQL, Redshift, AWS
       </p>
 
-      <p
-        style={{
-          fontSize: "0.8rem",
-          color: "var(--text-muted)",
-          fontStyle: "italic",
-          marginBottom: sectionGap,
-          borderLeft: "2px solid var(--border)",
-          paddingLeft: "0.75rem",
-        }}
-      >
-        Published with permission. Sensitive information has been removed.{" "}
-        <a
-          href="https://github.com/JackDriscoll13/sn_reporting_app-frontend_expo"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ borderBottom: "1px solid var(--border)" }}
-        >
-          Frontend code
-        </a>
-        {" · "}
-        <a
-          href="https://github.com/JackDriscoll13/sn_reporting_app-backend_expo"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ borderBottom: "1px solid var(--border)" }}
-        >
-          Backend code
-        </a>
-      </p>
-
       {/* Background */}
       <section style={{ marginBottom: sectionGap }}>
         <h2 style={h2Style}>Background</h2>
