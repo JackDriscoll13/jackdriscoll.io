@@ -1,7 +1,13 @@
+const pStyle: React.CSSProperties = {
+  fontSize: "0.9rem",
+  color: "var(--text-muted)",
+  lineHeight: 1.65,
+};
+
 export default function About() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
-      <p>
+      <p style={pStyle}>
         I'm a product-oriented software engineer. I work at Spectrum
         building data systems and run{" "}
         <a
@@ -14,7 +20,7 @@ export default function About() {
         </a>{" "}
         on the side.
       </p>
-      <p>
+      <p style={pStyle}>
         At Spectrum, I built an{" "}
         <a
           href="/projects/spectrum-analytics"
@@ -26,7 +32,7 @@ export default function About() {
         data. Through Umako Labs, I build custom applications for clients.
         We're currently working on 2 active projects.
       </p>
-      <p>
+      <p style={pStyle}>
         I also like to build and ship independent projects. Lately that's been
         an{" "}
         <a
@@ -38,7 +44,7 @@ export default function About() {
         and a native iOS workout
         timer.
       </p>
-      <p>
+      <p style={pStyle}>
         I studied data science, business, and psychology at the
         University of Colorado, where I did{" "}
         <a
@@ -60,7 +66,7 @@ export default function About() {
         </a>{" "}
         on AI collaboration and trust.
       </p>
-      <p style={{ color: "var(--text-muted)" }}>I live in lower Manhattan.</p>
+      <p style={pStyle}>I live in lower Manhattan.</p>
     </div>
   );
 }

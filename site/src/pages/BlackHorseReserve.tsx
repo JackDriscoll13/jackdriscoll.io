@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import BHRDiagram from "../components/BHRDiagram";
+import BHRFleetDiagram from "../components/BHRFleetDiagram";
 
 const sectionGap = "2rem";
 
@@ -114,6 +115,19 @@ export default function BlackHorseReserve() {
           fleets execute the booking flow. Results flow back through the Manager
           into Supabase, where the frontend reads them in real time.
         </p>
+        <p style={pStyle}>
+          Inside each fleet, workers take turns polling Resy for slot
+          availability, rotating every ~100 calls so no single IP gets rate
+          limited. The moment one worker detects an open slot, all workers
+          switch into race mode and fire booking requests simultaneously. First
+          successful reservation wins.
+        </p>
+        <p style={pStyle}>
+          The hardest part of this project was getting past Resy's bot detection
+          system. Standard HTTP clients get blocked immediately. Solving that
+          required one specific technical trick that I'll keep to myself.
+        </p>
+        <BHRFleetDiagram />
       </section>
 
       {/* Key technical decisions */}

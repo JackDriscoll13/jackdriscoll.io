@@ -21,8 +21,8 @@ const subLabelStyle: React.CSSProperties = {
   textAnchor: "middle" as const,
 };
 
-const arrowColor = "#3a3d45";
-const accentColor = "#6e7179";
+const arrowColor = "var(--diagram-arrow)";
+const accentColor = "var(--diagram-accent)";
 
 function Arrow({
   x1,
