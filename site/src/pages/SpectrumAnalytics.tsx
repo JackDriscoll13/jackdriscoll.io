@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import SpectrumDiagram from "../components/SpectrumDiagram";
-import { useRef } from "react";
 
 const sectionGap = "2rem";
 
@@ -34,8 +33,6 @@ function VideoDemo({
   src: string;
   caption: string;
 }) {
-  const ref = useRef<HTMLVideoElement>(null);
-
   return (
     <div style={{ marginBottom: "1.5rem" }}>
       <h3
