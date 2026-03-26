@@ -17,3 +17,6 @@ logproccessing/s3_config.py
 
 # Rebrand Steering Docs
 docs/rebrand/
+
+# Resume
+resume/

@@ -39,7 +39,7 @@ export default function About() {
           href="/projects/black-horse-reserve"
           style={{ borderBottom: "1px solid var(--border)" }}
         >
-          reservation system
+          automated restaurant reservation system
         </a>{" "}
         and a native iOS{" "}
         <a
