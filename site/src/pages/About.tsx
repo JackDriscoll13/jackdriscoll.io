@@ -28,7 +28,14 @@ export default function About() {
       </p>
       <p>
         I also like to build and ship independent projects. Lately that's been
-        an automated restaurant reservation system and a native iOS workout
+        an{" "}
+        <a
+          href="/projects/black-horse-reserve"
+          style={{ borderBottom: "1px solid var(--border)" }}
+        >
+          automated restaurant reservation system
+        </a>{" "}
+        and a native iOS workout
         timer.
       </p>
       <p>
