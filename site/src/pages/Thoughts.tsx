@@ -13,7 +13,7 @@ export default function Thoughts() {
         Writing some things down. Check back soon.
       </p>
       <a
-        href="https://x.com/JackDriscworkin"
+        href="https://x.com/jack___driscoll"
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -30,7 +30,7 @@ export default function Thoughts() {
           (e.currentTarget.style.color = "var(--text-muted)")
         }
       >
-        In the meantime → @JackDriscworkin
+        In the meantime → @jack___driscoll
       </a>
     </div>
   );
