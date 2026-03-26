@@ -34,12 +34,12 @@ export default function About() {
       </p>
       <p style={pStyle}>
         I also like to build and ship independent projects. Lately that's been
-        an{" "}
+        an automated{" "}
         <a
           href="/projects/black-horse-reserve"
           style={{ borderBottom: "1px solid var(--border)" }}
         >
-          automated restaurant reservation system
+          restaurant reservation system
         </a>{" "}
         and a native iOS{" "}
         <a
