@@ -1,6 +1,6 @@
 const pStyle: React.CSSProperties = {
   fontSize: "0.9rem",
-  color: "var(--text-muted)",
+  color: "var(--text-secondary)",
   lineHeight: 1.65,
 };
 
