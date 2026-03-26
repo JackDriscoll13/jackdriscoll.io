@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const EMAIL = "driscol.jack.m@gmail.com";
+const EMAIL = "driscoll.jack.m@gmail.com";
 
 const links = [
   { href: "https://github.com/JackDriscoll13", label: "GitHub" },
