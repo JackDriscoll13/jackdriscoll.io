@@ -39,10 +39,18 @@ export default function About() {
           href="/projects/black-horse-reserve"
           style={{ borderBottom: "1px solid var(--border)" }}
         >
-          automated restaurant reservation system
+          reservation system
         </a>{" "}
-        and a native iOS workout
-        timer.
+        and a native iOS{" "}
+        <a
+          href="https://apps.apple.com/us/app/kettlebell-interval-timer/id6759739598"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ borderBottom: "1px solid var(--border)" }}
+        >
+          workout timer
+        </a>
+        .
       </p>
       <p style={pStyle}>
         I studied data science, business, and psychology at the
