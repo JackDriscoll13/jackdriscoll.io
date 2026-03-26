@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
 interface Project {
@@ -49,7 +48,6 @@ const projects: Project[] = [
       "Built over two years at Spectrum, the largest and longest-running project on this list",
       "Interactive coverage maps, engagement analytics with 8+ views, Nielsen daily reporting, data export",
       "Custom JWT auth, automated data pipelines with APScheduler, admin console",
-      "Sanitized code samples shared publicly with permission from Spectrum",
     ],
     detailRoute: "/projects/spectrum-analytics",
     year: "2024–present",
@@ -63,7 +61,7 @@ const projects: Project[] = [
       "Built to solve my own problem — needed a clean timer for kettlebell and core workouts",
       "Native iOS, designed for simplicity",
     ],
-    link: { url: "https://apps.apple.com/us/app/kettlebell-interval-timer/id6759739598", label: "App Store" },
+    link: { url: "https://apps.apple.com/us/app/kettlebell-interval-timer/id6759739598", label: "See it on the App Store" },
     year: "2026",
   },
   {
@@ -94,9 +92,22 @@ const projects: Project[] = [
   },
 ];
 
-function ProjectCard({ project }: { project: Project }) {
-  const [expanded, setExpanded] = useState(false);
+const linkStyle: React.CSSProperties = {
+  fontSize: "0.8rem",
+  color: "var(--text-muted)",
+  textDecoration: "none",
+  borderBottom: "1px solid var(--border)",
+  transition: "color 0.15s ease",
+};
 
+function hoverIn(e: React.MouseEvent<HTMLAnchorElement>) {
+  e.currentTarget.style.color = "var(--text)";
+}
+function hoverOut(e: React.MouseEvent<HTMLAnchorElement>) {
+  e.currentTarget.style.color = "var(--text-muted)";
+}
+
+function ProjectCard({ project }: { project: Project }) {
   return (
     <div
       style={{
@@ -169,119 +180,67 @@ function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      <div style={{ display: "flex", gap: "1rem", alignItems: "baseline" }}>
-        <button
-          onClick={() => setExpanded(!expanded)}
-          style={{
-            background: "none",
-            border: "none",
-            color: "var(--text-muted)",
-            fontSize: "0.8rem",
-            cursor: "pointer",
-            padding: 0,
-            transition: "color 0.15s ease",
-          }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.color = "var(--text)")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.color = "var(--text-muted)")
-          }
-        >
-          {expanded ? "Less" : "More"}
-        </button>
-        {project.detailRoute && (
-          <Link
-            to={project.detailRoute}
-            style={{
-              fontSize: "0.8rem",
-              color: "var(--text-muted)",
-              textDecoration: "none",
-              borderBottom: "1px solid var(--border)",
-              transition: "color 0.15s ease",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.color = "var(--text)")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.color = "var(--text-muted)")
-            }
-          >
-            Read more
-          </Link>
-        )}
-      </div>
-
-      <div
+      <ul
         style={{
-          maxHeight: expanded ? "500px" : "0",
-          overflow: "hidden",
-          transition: "max-height 0.3s ease, opacity 0.2s ease",
-          opacity: expanded ? 1 : 0,
+          paddingLeft: "1rem",
+          display: "flex",
+          flexDirection: "column",
+          gap: "0.35rem",
+          marginBottom: "0.75rem",
         }}
       >
-        <ul
-          style={{
-            marginTop: "0.75rem",
-            paddingLeft: "1rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "0.35rem",
-          }}
-        >
-          {project.details.map((d, i) => (
-            <li
-              key={i}
-              style={{
-                fontSize: "0.825rem",
-                color: "var(--text-muted)",
-                lineHeight: 1.55,
-              }}
-            >
-              {d}
-            </li>
-          ))}
-        </ul>
-
-        {(project.link || project.github) && (
-          <div
+        {project.details.map((d, i) => (
+          <li
+            key={i}
             style={{
-              display: "flex",
-              gap: "1rem",
-              marginTop: "0.75rem",
+              fontSize: "0.825rem",
+              color: "var(--text-muted)",
+              lineHeight: 1.55,
             }}
           >
-            {project.link && (
-              <a
-                href={project.link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  fontSize: "0.8rem",
-                  color: "var(--text-muted)",
-                  borderBottom: "1px solid var(--border)",
-                }}
-              >
-                {project.link.label}
-              </a>
-            )}
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  fontSize: "0.8rem",
-                  color: "var(--text-muted)",
-                  borderBottom: "1px solid var(--border)",
-                }}
-              >
-                GitHub
-              </a>
-            )}
-          </div>
-        )}
-      </div>
+            {d}
+          </li>
+        ))}
+      </ul>
+
+      {(project.link || project.github || project.detailRoute) && (
+        <div style={{ display: "flex", gap: "1rem" }}>
+          {project.detailRoute && (
+            <Link
+              to={project.detailRoute}
+              style={linkStyle}
+              onMouseEnter={hoverIn}
+              onMouseLeave={hoverOut}
+            >
+              Read more
+            </Link>
+          )}
+          {project.link && (
+            <a
+              href={project.link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={linkStyle}
+              onMouseEnter={hoverIn}
+              onMouseLeave={hoverOut}
+            >
+              {project.link.label}
+            </a>
+          )}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={linkStyle}
+              onMouseEnter={hoverIn}
+              onMouseLeave={hoverOut}
+            >
+              GitHub
+            </a>
+          )}
+        </div>
+      )}
     </div>
   );
 }
