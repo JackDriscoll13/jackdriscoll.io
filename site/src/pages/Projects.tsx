@@ -30,6 +30,7 @@ const projects: Project[] = [
       "Invite-only frontend with email OTP auth, snipe scheduling, admin dashboard, and community features",
     ],
     link: { url: "https://www.blackhorsereserve.com", label: "blackhorsereserve.com" },
+    detailRoute: "/projects/black-horse-reserve",
     year: "2025–2026",
   },
   {
@@ -47,7 +48,7 @@ const projects: Project[] = [
     details: [
       "Built over two years at Spectrum, the largest and longest-running project on this list",
       "Interactive coverage maps, engagement analytics with 8+ views, Nielsen daily reporting, data export",
-      "Custom JWT auth, automated data pipelines with APScheduler, admin console",
+      "Automated data pipelines with APScheduler, admin console",
     ],
     detailRoute: "/projects/spectrum-analytics",
     year: "2024–present",

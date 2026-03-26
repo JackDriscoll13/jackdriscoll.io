@@ -2,15 +2,7 @@ export default function About() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
       <p>
-        I'm a product-oriented software engineer. I work at{" "}
-        <a
-          href="https://en.wikipedia.org/wiki/Spectrum_(brand)"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ borderBottom: "1px solid var(--border)" }}
-        >
-          Spectrum
-        </a>{" "}
+        I'm a product-oriented software engineer. I work at Spectrum
         building data systems and run{" "}
         <a
           href="https://umako.co"
@@ -23,7 +15,14 @@ export default function About() {
         on the side.
       </p>
       <p>
-        At Spectrum, I built an internal analytics app that lets product teams
+        My biggest project at Spectrum is an{" "}
+        <a
+          href="/projects/spectrum-analytics"
+          style={{ borderBottom: "1px solid var(--border)" }}
+        >
+          internal analytics app
+        </a>{" "}
+        that lets product teams
         explore and report on large-scale viewership data. Through Umako Labs, I
         build custom applications and AI integrations for clients. We're currently working on 2
         projects.
@@ -34,16 +33,8 @@ export default function About() {
         timer.
       </p>
       <p>
-        I studied data science, business, and psychology at the{" "}
-        <a
-          href="https://www.colorado.edu"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ borderBottom: "1px solid var(--border)" }}
-        >
-          University of Colorado
-        </a>
-        , where I did{" "}
+        I studied data science, business, and psychology at the
+        University of Colorado, where I did{" "}
         <a
           href="https://www.colorado.edu/lab/shine/"
           target="_blank"

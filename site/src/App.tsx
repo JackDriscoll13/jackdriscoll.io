@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Thoughts from "./pages/Thoughts";
 import SpectrumAnalytics from "./pages/SpectrumAnalytics";
+import BlackHorseReserve from "./pages/BlackHorseReserve";
 
 function FadeWrapper({ children }: { children: React.ReactNode }) {
   const location = useLocation();
@@ -44,6 +45,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/spectrum-analytics" element={<SpectrumAnalytics />} />
+        <Route path="/projects/black-horse-reserve" element={<BlackHorseReserve />} />
         <Route path="/thoughts" element={<Thoughts />} />
       </FadeWrapper>
     </Layout>
