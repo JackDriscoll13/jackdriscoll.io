@@ -136,20 +136,20 @@ export default function BlackHorseReserve() {
         <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
           {[
             {
-              decision: "EC2 fleet instead of running locally",
-              why: "AWS data centers give roughly 70ms latency to Resy's servers compared to about 180ms from a home connection. Each worker IP can handle 120 to 220 clean requests before needing to cycle, so a fleet of instances provides both speed and resilience. When milliseconds determine whether you get the table, that gap matters.",
+              decision: "Ephemeral EC2 fleet instead of a single host",
+              why: "Requests run from AWS rather than a local machine, which cuts round-trip latency to Resy roughly in half. The bigger reason is rate limiting: a single IP can only make a limited number of requests before it gets throttled, so the work is spread across a fleet of short-lived instances. More instances means more IPs and more parallelism, and the fleet tears down once a run completes. The cost is orchestration — launching, deploying to, and terminating instances on every run, plus staying under AWS instance quotas.",
             },
             {
-              decision: "Dual database: Supabase + local SQLite",
-              why: "Supabase handles all shared state between the frontend and backend. But scheduling is mission-critical. If Supabase has a momentary outage, I can't afford to miss a booking window. The Manager keeps its own SQLite database for active schedules and job execution records. If the network drops, scheduled jobs still fire on time.",
+              decision: "Postgres as the work queue",
+              why: "The frontend writes booking requests as rows in Supabase. The manager polls every few seconds and atomically claims pending rows. There's no SQS or Redis in the path. Polling adds a few seconds of latency before a request is picked up, but that doesn't matter here: claiming a request only schedules it. The actual booking fires at a precise drop time, independent of when it was polled. Keeping the queue in the database it already depends on avoids a second piece of infrastructure and keeps everything observable in one place.",
             },
             {
-              decision: "Monthly snipe quotas enforced at the database level",
-              why: "Each user gets a fixed number of booking attempts per month. The quota is enforced through RLS policies and a centralized config table in Supabase, so it can't be bypassed from the client. This keeps resource usage manageable and EC2 costs predictable.",
+              decision: "Local SQLite for scheduling",
+              why: "The manager runs booking jobs off a local SQLite database and mirrors their status back to Supabase for the frontend to read. Keeping the schedule local means a brief Supabase outage can't delay or drop a time-sensitive job. It still fires on time. The trade-off is keeping the two stores in sync.",
             },
             {
-              decision: "CloudWatch for observability across ephemeral fleets",
-              why: "Every worker in every fleet logs to CloudWatch, giving centralized visibility across instances that spin up and tear down dynamically. Without this, debugging a failed booking attempt across a fleet of short-lived EC2 instances would be nearly impossible.",
+              decision: "Quota enforced in the database, not the client",
+              why: "Each user gets a fixed number of booking attempts per month. The limit is enforced through Postgres row-level security at insert time, so it holds regardless of what the client does. Hitting the API directly can't get around it. The downside is that some logic lives in SQL policies rather than application code, which is less visible and needs to be documented well.",
             },
           ].map(({ decision, why }) => (
             <div key={decision}>
